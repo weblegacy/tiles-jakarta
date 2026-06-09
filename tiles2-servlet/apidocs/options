@@ -1,0 +1,28 @@
+--no-fonts
+-classpath
+'/home/stefan/.m2/repository/org/apache/tiles/tiles-core/2.2.2/tiles-core-2.2.2.jar:/home/stefan/.m2/repository/org/apache/tiles/tiles-api/2.2.2/tiles-api-2.2.2.jar:/home/stefan/.m2/repository/commons-digester/commons-digester/2.0/commons-digester-2.0.jar:/home/stefan/.m2/repository/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0.jar:/home/stefan/.m2/repository/org/slf4j/jcl-over-slf4j/1.5.8/jcl-over-slf4j-1.5.8.jar:/home/stefan/.m2/repository/org/slf4j/slf4j-jdk14/1.5.8/slf4j-jdk14-1.5.8.jar:/home/stefan/.m2/repository/org/slf4j/slf4j-api/1.5.8/slf4j-api-1.5.8.jar:/home/stefan/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/home/stefan/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/stefan/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/stefan/.m2/repository/org/easymock/easymock/2.5.1/easymock-2.5.1.jar:/home/stefan/.m2/repository/org/easymock/easymockclassextension/2.4/easymockclassextension-2.4.jar:/home/stefan/.m2/repository/cglib/cglib-nodep/2.1_3/cglib-nodep-2.1_3.jar:/home/stefan/.m2/repository/org/apache/shale/shale-test/1.0.5/shale-test-1.0.5.jar'
+-encoding
+'UTF-8'
+-protected
+--release
+8
+-sourcepath
+'/home/stefan/eclipse-workspace/tiles-jakarta/tiles2-servlet/src/main/java:/home/stefan/eclipse-workspace/tiles-jakarta/tiles2-servlet/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2026 <a href="https://github.com/weblegacy">Web-Legacy</a>. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/stefan/eclipse-workspace/tiles-jakarta/tiles2-servlet/target/site/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:all,-missing
+-doctitle
+'Tiles 2 - Jakarta-Servlet support 0.0.1-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' '/home/stefan/eclipse-workspace/tiles-jakarta/tiles2-servlet/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Tiles 2 - Jakarta-Servlet support 0.0.1-SNAPSHOT API'
