@@ -79,69 +79,15 @@
 <th>Errors</th>
 <th>Missing Classes</th></tr>
 <tr class="b">
-<td>68</td>
-<td>84</td>
-<td>16</td>
+<td>34</td>
+<td>42</td>
+<td>8</td>
 <td>0</td></tr></table></section><section>
 <h1>Files</h1>
 <table class="table table-striped">
 <tr class="a">
 <th>Class</th>
 <th>Bugs</th></tr>
-<tr class="b">
-<td><a href="#org.apache.tiles.servlet.context.ExternalWriterHttpServletResponse">org.apache.tiles.servlet.context.ExternalWriterHttpServletResponse</a></td>
-<td>2</td></tr>
-<tr class="a">
-<td><a href="#org.apache.tiles.servlet.context.ServletApplicationScopeMap">org.apache.tiles.servlet.context.ServletApplicationScopeMap</a></td>
-<td>2</td></tr>
-<tr class="b">
-<td><a href="#org.apache.tiles.servlet.context.ServletHeaderMap">org.apache.tiles.servlet.context.ServletHeaderMap</a></td>
-<td>1</td></tr>
-<tr class="a">
-<td><a href="#org.apache.tiles.servlet.context.ServletHeaderValuesMap">org.apache.tiles.servlet.context.ServletHeaderValuesMap</a></td>
-<td>1</td></tr>
-<tr class="b">
-<td><a href="#org.apache.tiles.servlet.context.ServletInitParamMap">org.apache.tiles.servlet.context.ServletInitParamMap</a></td>
-<td>1</td></tr>
-<tr class="a">
-<td><a href="#org.apache.tiles.servlet.context.ServletParamMap">org.apache.tiles.servlet.context.ServletParamMap</a></td>
-<td>1</td></tr>
-<tr class="b">
-<td><a href="#org.apache.tiles.servlet.context.ServletParamValuesMap">org.apache.tiles.servlet.context.ServletParamValuesMap</a></td>
-<td>2</td></tr>
-<tr class="a">
-<td><a href="#org.apache.tiles.servlet.context.ServletRequestScopeMap">org.apache.tiles.servlet.context.ServletRequestScopeMap</a></td>
-<td>2</td></tr>
-<tr class="b">
-<td><a href="#org.apache.tiles.servlet.context.ServletSessionScopeMap">org.apache.tiles.servlet.context.ServletSessionScopeMap</a></td>
-<td>2</td></tr>
-<tr class="a">
-<td><a href="#org.apache.tiles.servlet.context.ServletTilesApplicationContext">org.apache.tiles.servlet.context.ServletTilesApplicationContext</a></td>
-<td>7</td></tr>
-<tr class="b">
-<td><a href="#org.apache.tiles.servlet.context.ServletTilesContextFactory">org.apache.tiles.servlet.context.ServletTilesContextFactory</a></td>
-<td>1</td></tr>
-<tr class="a">
-<td><a href="#org.apache.tiles.servlet.context.ServletTilesRequestContext">org.apache.tiles.servlet.context.ServletTilesRequestContext</a></td>
-<td>13</td></tr>
-<tr class="b">
-<td><a href="#org.apache.tiles.web.startup.TilesFilter$ServletConfigAdapter">org.apache.tiles.web.startup.TilesFilter$ServletConfigAdapter</a></td>
-<td>1</td></tr>
-<tr class="a">
-<td><a href="#org.apache.tiles.web.util.ServletContextAdapter$CompositeEnumeration">org.apache.tiles.web.util.ServletContextAdapter$CompositeEnumeration</a></td>
-<td>1</td></tr>
-<tr class="b">
-<td><a href="#org.apache.tiles.web.util.TilesDispatchServlet">org.apache.tiles.web.util.TilesDispatchServlet</a></td>
-<td>1</td></tr>
-<tr class="a">
-<td><a href="#org.apache.tiles.web.util.TilesDispatchServlet$DefaultMutator">org.apache.tiles.web.util.TilesDispatchServlet$DefaultMutator</a></td>
-<td>1</td></tr>
-<tr class="b">
-<td><a href="#org.apache.tiles.servlet.context.wildcard.WildcardServletTilesApplicationContext">org.apache.tiles.servlet.context.wildcard.WildcardServletTilesApplicationContext</a></td>
-<td>1</td></tr>
-<tr class="a">
-<td><a href="#org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext">org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext</a></td>
-<td>2</td></tr>
 <tr class="b">
 <td><a href="#org.apache.tiles.servlet.context.ExternalWriterHttpServletResponse">org.apache.tiles.servlet.context.ExternalWriterHttpServletResponse</a></td>
 <td>2</td></tr>
@@ -215,18 +161,6 @@
 <td>MALICIOUS_CODE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
 <td>53</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ExternalWriterHttpServletResponse.getWriter() may expose internal representation by returning ExternalWriterHttpServletResponse.writer</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>59</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>new org.apache.tiles.servlet.context.ExternalWriterHttpServletResponse(HttpServletResponse, PrintWriter) may expose internal representation by storing an externally mutable object into ExternalWriterHttpServletResponse.writer</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>53</td>
 <td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletApplicationScopeMap"></a><section>
 <h2>org.apache.tiles.servlet.context.ServletApplicationScopeMap</h2>
 <table class="table table-striped">
@@ -236,18 +170,6 @@
 <th>Details</th>
 <th>Line</th>
 <th>Priority</th></tr>
-<tr class="b">
-<td>Equals method for org.apache.tiles.servlet.context.ServletApplicationScopeMap assumes the argument is of type ServletApplicationScopeMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>113</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletApplicationScopeMap.putAll(Map) makes inefficient use of keySet iterator instead of entrySet iterator</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#WMI_WRONG_MAP_ITERATOR">WMI_WRONG_MAP_ITERATOR</a></td>
-<td>176</td>
-<td>Medium</td></tr>
 <tr class="b">
 <td>Equals method for org.apache.tiles.servlet.context.ServletApplicationScopeMap assumes the argument is of type ServletApplicationScopeMap</td>
 <td>BAD_PRACTICE</td>
@@ -273,12 +195,6 @@
 <td>BAD_PRACTICE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
 <td>124</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Equals method for org.apache.tiles.servlet.context.ServletHeaderMap assumes the argument is of type ServletHeaderMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>124</td>
 <td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletHeaderValuesMap"></a><section>
 <h2>org.apache.tiles.servlet.context.ServletHeaderValuesMap</h2>
 <table class="table table-striped">
@@ -289,12 +205,6 @@
 <th>Line</th>
 <th>Priority</th></tr>
 <tr class="b">
-<td>Equals method for org.apache.tiles.servlet.context.ServletHeaderValuesMap assumes the argument is of type ServletHeaderValuesMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>121</td>
-<td>Medium</td></tr>
-<tr class="a">
 <td>Equals method for org.apache.tiles.servlet.context.ServletHeaderValuesMap assumes the argument is of type ServletHeaderValuesMap</td>
 <td>BAD_PRACTICE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
@@ -313,12 +223,6 @@
 <td>BAD_PRACTICE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
 <td>104</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Equals method for org.apache.tiles.servlet.context.ServletInitParamMap assumes the argument is of type ServletInitParamMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>104</td>
 <td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletParamMap"></a><section>
 <h2>org.apache.tiles.servlet.context.ServletParamMap</h2>
 <table class="table table-striped">
@@ -333,12 +237,6 @@
 <td>BAD_PRACTICE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
 <td>105</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Equals method for org.apache.tiles.servlet.context.ServletParamMap assumes the argument is of type ServletParamMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>105</td>
 <td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletParamValuesMap"></a><section>
 <h2>org.apache.tiles.servlet.context.ServletParamValuesMap</h2>
 <table class="table table-striped">
@@ -348,18 +246,6 @@
 <th>Details</th>
 <th>Line</th>
 <th>Priority</th></tr>
-<tr class="b">
-<td>Equals method for org.apache.tiles.servlet.context.ServletParamValuesMap assumes the argument is of type ServletParamValuesMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>119</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Using .equals to compare two String[]'s, (equivalent to ==) in org.apache.tiles.servlet.context.ServletParamValuesMap.equals(Object)</td>
-<td>CORRECTNESS</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EC_BAD_ARRAY_COMPARE">EC_BAD_ARRAY_COMPARE</a></td>
-<td>126</td>
-<td>Medium</td></tr>
 <tr class="b">
 <td>Equals method for org.apache.tiles.servlet.context.ServletParamValuesMap assumes the argument is of type ServletParamValuesMap</td>
 <td>BAD_PRACTICE</td>
@@ -391,18 +277,6 @@
 <td>PERFORMANCE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#WMI_WRONG_MAP_ITERATOR">WMI_WRONG_MAP_ITERATOR</a></td>
 <td>175</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>Equals method for org.apache.tiles.servlet.context.ServletRequestScopeMap assumes the argument is of type ServletRequestScopeMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>112</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletRequestScopeMap.putAll(Map) makes inefficient use of keySet iterator instead of entrySet iterator</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#WMI_WRONG_MAP_ITERATOR">WMI_WRONG_MAP_ITERATOR</a></td>
-<td>175</td>
 <td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletSessionScopeMap"></a><section>
 <h2>org.apache.tiles.servlet.context.ServletSessionScopeMap</h2>
 <table class="table table-striped">
@@ -412,18 +286,6 @@
 <th>Details</th>
 <th>Line</th>
 <th>Priority</th></tr>
-<tr class="b">
-<td>Nullcheck of session at line 127 of value previously dereferenced in org.apache.tiles.servlet.context.ServletSessionScopeMap.equals(Object)</td>
-<td>CORRECTNESS</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE">RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE</a></td>
-<td>127</td>
-<td>High</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletSessionScopeMap.putAll(Map) makes inefficient use of keySet iterator instead of entrySet iterator</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#WMI_WRONG_MAP_ITERATOR">WMI_WRONG_MAP_ITERATOR</a></td>
-<td>209</td>
-<td>Medium</td></tr>
 <tr class="b">
 <td>Nullcheck of session at line 127 of value previously dereferenced in org.apache.tiles.servlet.context.ServletSessionScopeMap.equals(Object)</td>
 <td>CORRECTNESS</td>
@@ -485,48 +347,6 @@
 <td>MALICIOUS_CODE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
 <td>129</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getResources(String) is or uses a map or set of URLs, which can be a performance hog</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#DMI_COLLECTION_OF_URLS">DMI_COLLECTION_OF_URLS</a></td>
-<td>105</td>
-<td>High</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getResources(String) is or uses a map or set of URLs, which can be a performance hog</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#DMI_COLLECTION_OF_URLS">DMI_COLLECTION_OF_URLS</a></td>
-<td>106</td>
-<td>High</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getApplicationScope() may expose internal representation by returning ServletTilesApplicationContext.applicationScope</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>83</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getContext() may expose internal representation by returning ServletTilesApplicationContext.servletContext</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>74</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getInitParams() may expose internal representation by returning ServletTilesApplicationContext.initParam</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>94</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getServletContext() may expose internal representation by returning ServletTilesApplicationContext.servletContext</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>117</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.initialize(ServletContext) may expose internal representation by storing an externally mutable object into ServletTilesApplicationContext.servletContext</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>129</td>
 <td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletTilesContextFactory"></a><section>
 <h2>org.apache.tiles.servlet.context.ServletTilesContextFactory</h2>
 <table class="table table-striped">
@@ -537,12 +357,6 @@
 <th>Line</th>
 <th>Priority</th></tr>
 <tr class="b">
-<td>instanceof will always return true for all non-null values in org.apache.tiles.servlet.context.ServletTilesContextFactory.init(Map), since all org.apache.tiles.servlet.context.ServletTilesApplicationContextFactory are instances of org.apache.tiles.Initializable</td>
-<td>STYLE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_VACUOUS_INSTANCEOF">BC_VACUOUS_INSTANCEOF</a></td>
-<td>80</td>
-<td>Medium</td></tr>
-<tr class="a">
 <td>instanceof will always return true for all non-null values in org.apache.tiles.servlet.context.ServletTilesContextFactory.init(Map), since all org.apache.tiles.servlet.context.ServletTilesApplicationContextFactory are instances of org.apache.tiles.Initializable</td>
 <td>STYLE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_VACUOUS_INSTANCEOF">BC_VACUOUS_INSTANCEOF</a></td>
@@ -633,84 +447,6 @@
 <td>SECURITY</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#REQUESTDISPATCHER_FILE_DISCLOSURE">REQUESTDISPATCHER_FILE_DISCLOSURE</a></td>
 <td>260</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getHeader() may expose internal representation by returning ServletTilesRequestContext.header</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>153</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getHeaderValues() may expose internal representation by returning ServletTilesRequestContext.headerValues</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>164</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getOutputStream() may expose internal representation by returning ServletTilesRequestContext.outputStream</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>272</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getParam() may expose internal representation by returning ServletTilesRequestContext.param</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>175</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getParamValues() may expose internal representation by returning ServletTilesRequestContext.paramValues</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>186</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getPrintWriter() may expose internal representation by returning ServletTilesRequestContext.writer</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>285</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getRequestObjects() may expose internal representation by returning ServletTilesRequestContext.requestObjects</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>310</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getRequestScope() may expose internal representation by returning ServletTilesRequestContext.requestScope</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>197</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getResponse() may expose internal representation by returning ServletTilesRequestContext.response</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>320</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getSessionScope() may expose internal representation by returning ServletTilesRequestContext.sessionScope</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>208</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.initialize(HttpServletRequest, HttpServletResponse) may expose internal representation by storing an externally mutable object into ServletTilesRequestContext.response</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>335</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>RequestDispatcher populated with user controlled parameters</td>
-<td>SECURITY</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#REQUESTDISPATCHER_FILE_DISCLOSURE">REQUESTDISPATCHER_FILE_DISCLOSURE</a></td>
-<td>241</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>RequestDispatcher populated with user controlled parameters</td>
-<td>SECURITY</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#REQUESTDISPATCHER_FILE_DISCLOSURE">REQUESTDISPATCHER_FILE_DISCLOSURE</a></td>
-<td>260</td>
 <td>Medium</td></tr></table></section><a name="org.apache.tiles.web.startup.TilesFilter$ServletConfigAdapter"></a><section>
 <h2>org.apache.tiles.web.startup.TilesFilter$ServletConfigAdapter</h2>
 <table class="table table-striped">
@@ -721,12 +457,6 @@
 <th>Line</th>
 <th>Priority</th></tr>
 <tr class="b">
-<td>Should org.apache.tiles.web.startup.TilesFilter$ServletConfigAdapter be a _static_ inner class?</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SIC_INNER_SHOULD_BE_STATIC">SIC_INNER_SHOULD_BE_STATIC</a></td>
-<td>159</td>
-<td>Medium</td></tr>
-<tr class="a">
 <td>Should org.apache.tiles.web.startup.TilesFilter$ServletConfigAdapter be a _static_ inner class?</td>
 <td>PERFORMANCE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SIC_INNER_SHOULD_BE_STATIC">SIC_INNER_SHOULD_BE_STATIC</a></td>
@@ -745,12 +475,6 @@
 <td>PERFORMANCE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SIC_INNER_SHOULD_BE_STATIC">SIC_INNER_SHOULD_BE_STATIC</a></td>
 <td>233</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Should org.apache.tiles.web.util.ServletContextAdapter$CompositeEnumeration be a _static_ inner class?</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SIC_INNER_SHOULD_BE_STATIC">SIC_INNER_SHOULD_BE_STATIC</a></td>
-<td>233</td>
 <td>Medium</td></tr></table></section><a name="org.apache.tiles.web.util.TilesDispatchServlet"></a><section>
 <h2>org.apache.tiles.web.util.TilesDispatchServlet</h2>
 <table class="table table-striped">
@@ -761,12 +485,6 @@
 <th>Line</th>
 <th>Priority</th></tr>
 <tr class="b">
-<td>This use of org/slf4j/Logger.info(Ljava/lang/String;)V might be used to include CRLF characters into log messages</td>
-<td>SECURITY</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#CRLF_INJECTION_LOGS">CRLF_INJECTION_LOGS</a></td>
-<td>98</td>
-<td>Medium</td></tr>
-<tr class="a">
 <td>This use of org/slf4j/Logger.info(Ljava/lang/String;)V might be used to include CRLF characters into log messages</td>
 <td>SECURITY</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#CRLF_INJECTION_LOGS">CRLF_INJECTION_LOGS</a></td>
@@ -785,12 +503,6 @@
 <td>PERFORMANCE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SIC_INNER_SHOULD_BE_STATIC">SIC_INNER_SHOULD_BE_STATIC</a></td>
 <td>131</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Should org.apache.tiles.web.util.TilesDispatchServlet$DefaultMutator be a _static_ inner class?</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SIC_INNER_SHOULD_BE_STATIC">SIC_INNER_SHOULD_BE_STATIC</a></td>
-<td>131</td>
 <td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.wildcard.WildcardServletTilesApplicationContext"></a><section>
 <h2>org.apache.tiles.servlet.context.wildcard.WildcardServletTilesApplicationContext</h2>
 <table class="table table-striped">
@@ -805,12 +517,6 @@
 <td>BAD_PRACTICE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#NM_SAME_SIMPLE_NAME_AS_SUPERCLASS">NM_SAME_SIMPLE_NAME_AS_SUPERCLASS</a></td>
 <td>48</td>
-<td>High</td></tr>
-<tr class="a">
-<td>The class name org.apache.tiles.servlet.context.wildcard.WildcardServletTilesApplicationContext shadows the simple name of the superclass org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#NM_SAME_SIMPLE_NAME_AS_SUPERCLASS">NM_SAME_SIMPLE_NAME_AS_SUPERCLASS</a></td>
-<td>48</td>
 <td>High</td></tr></table></section><a name="org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext"></a><section>
 <h2>org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext</h2>
 <table class="table table-striped">
@@ -820,666 +526,6 @@
 <th>Details</th>
 <th>Line</th>
 <th>Priority</th></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext.getResources(String) is or uses a map or set of URLs, which can be a performance hog</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#DMI_COLLECTION_OF_URLS">DMI_COLLECTION_OF_URLS</a></td>
-<td>85</td>
-<td>High</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext.getResources(String) is or uses a map or set of URLs, which can be a performance hog</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#DMI_COLLECTION_OF_URLS">DMI_COLLECTION_OF_URLS</a></td>
-<td>90</td>
-<td>High</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext.getResources(String) is or uses a map or set of URLs, which can be a performance hog</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#DMI_COLLECTION_OF_URLS">DMI_COLLECTION_OF_URLS</a></td>
-<td>85</td>
-<td>High</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext.getResources(String) is or uses a map or set of URLs, which can be a performance hog</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#DMI_COLLECTION_OF_URLS">DMI_COLLECTION_OF_URLS</a></td>
-<td>90</td>
-<td>High</td></tr></table></section><a name="org.apache.tiles.servlet.context.ExternalWriterHttpServletResponse"></a><section>
-<h2>org.apache.tiles.servlet.context.ExternalWriterHttpServletResponse</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ExternalWriterHttpServletResponse.getWriter() may expose internal representation by returning ExternalWriterHttpServletResponse.writer</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>59</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>new org.apache.tiles.servlet.context.ExternalWriterHttpServletResponse(HttpServletResponse, PrintWriter) may expose internal representation by storing an externally mutable object into ExternalWriterHttpServletResponse.writer</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>53</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ExternalWriterHttpServletResponse.getWriter() may expose internal representation by returning ExternalWriterHttpServletResponse.writer</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>59</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>new org.apache.tiles.servlet.context.ExternalWriterHttpServletResponse(HttpServletResponse, PrintWriter) may expose internal representation by storing an externally mutable object into ExternalWriterHttpServletResponse.writer</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>53</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletApplicationScopeMap"></a><section>
-<h2>org.apache.tiles.servlet.context.ServletApplicationScopeMap</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>Equals method for org.apache.tiles.servlet.context.ServletApplicationScopeMap assumes the argument is of type ServletApplicationScopeMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>113</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletApplicationScopeMap.putAll(Map) makes inefficient use of keySet iterator instead of entrySet iterator</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#WMI_WRONG_MAP_ITERATOR">WMI_WRONG_MAP_ITERATOR</a></td>
-<td>176</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>Equals method for org.apache.tiles.servlet.context.ServletApplicationScopeMap assumes the argument is of type ServletApplicationScopeMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>113</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletApplicationScopeMap.putAll(Map) makes inefficient use of keySet iterator instead of entrySet iterator</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#WMI_WRONG_MAP_ITERATOR">WMI_WRONG_MAP_ITERATOR</a></td>
-<td>176</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletHeaderMap"></a><section>
-<h2>org.apache.tiles.servlet.context.ServletHeaderMap</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>Equals method for org.apache.tiles.servlet.context.ServletHeaderMap assumes the argument is of type ServletHeaderMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>124</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Equals method for org.apache.tiles.servlet.context.ServletHeaderMap assumes the argument is of type ServletHeaderMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>124</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletHeaderValuesMap"></a><section>
-<h2>org.apache.tiles.servlet.context.ServletHeaderValuesMap</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>Equals method for org.apache.tiles.servlet.context.ServletHeaderValuesMap assumes the argument is of type ServletHeaderValuesMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>121</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Equals method for org.apache.tiles.servlet.context.ServletHeaderValuesMap assumes the argument is of type ServletHeaderValuesMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>121</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletInitParamMap"></a><section>
-<h2>org.apache.tiles.servlet.context.ServletInitParamMap</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>Equals method for org.apache.tiles.servlet.context.ServletInitParamMap assumes the argument is of type ServletInitParamMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>104</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Equals method for org.apache.tiles.servlet.context.ServletInitParamMap assumes the argument is of type ServletInitParamMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>104</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletParamMap"></a><section>
-<h2>org.apache.tiles.servlet.context.ServletParamMap</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>Equals method for org.apache.tiles.servlet.context.ServletParamMap assumes the argument is of type ServletParamMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>105</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Equals method for org.apache.tiles.servlet.context.ServletParamMap assumes the argument is of type ServletParamMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>105</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletParamValuesMap"></a><section>
-<h2>org.apache.tiles.servlet.context.ServletParamValuesMap</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>Equals method for org.apache.tiles.servlet.context.ServletParamValuesMap assumes the argument is of type ServletParamValuesMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>119</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Using .equals to compare two String[]'s, (equivalent to ==) in org.apache.tiles.servlet.context.ServletParamValuesMap.equals(Object)</td>
-<td>CORRECTNESS</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EC_BAD_ARRAY_COMPARE">EC_BAD_ARRAY_COMPARE</a></td>
-<td>126</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>Equals method for org.apache.tiles.servlet.context.ServletParamValuesMap assumes the argument is of type ServletParamValuesMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>119</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Using .equals to compare two String[]'s, (equivalent to ==) in org.apache.tiles.servlet.context.ServletParamValuesMap.equals(Object)</td>
-<td>CORRECTNESS</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EC_BAD_ARRAY_COMPARE">EC_BAD_ARRAY_COMPARE</a></td>
-<td>126</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletRequestScopeMap"></a><section>
-<h2>org.apache.tiles.servlet.context.ServletRequestScopeMap</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>Equals method for org.apache.tiles.servlet.context.ServletRequestScopeMap assumes the argument is of type ServletRequestScopeMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>112</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletRequestScopeMap.putAll(Map) makes inefficient use of keySet iterator instead of entrySet iterator</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#WMI_WRONG_MAP_ITERATOR">WMI_WRONG_MAP_ITERATOR</a></td>
-<td>175</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>Equals method for org.apache.tiles.servlet.context.ServletRequestScopeMap assumes the argument is of type ServletRequestScopeMap</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS</a></td>
-<td>112</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletRequestScopeMap.putAll(Map) makes inefficient use of keySet iterator instead of entrySet iterator</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#WMI_WRONG_MAP_ITERATOR">WMI_WRONG_MAP_ITERATOR</a></td>
-<td>175</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletSessionScopeMap"></a><section>
-<h2>org.apache.tiles.servlet.context.ServletSessionScopeMap</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>Nullcheck of session at line 127 of value previously dereferenced in org.apache.tiles.servlet.context.ServletSessionScopeMap.equals(Object)</td>
-<td>CORRECTNESS</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE">RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE</a></td>
-<td>127</td>
-<td>High</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletSessionScopeMap.putAll(Map) makes inefficient use of keySet iterator instead of entrySet iterator</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#WMI_WRONG_MAP_ITERATOR">WMI_WRONG_MAP_ITERATOR</a></td>
-<td>209</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>Nullcheck of session at line 127 of value previously dereferenced in org.apache.tiles.servlet.context.ServletSessionScopeMap.equals(Object)</td>
-<td>CORRECTNESS</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE">RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE</a></td>
-<td>127</td>
-<td>High</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletSessionScopeMap.putAll(Map) makes inefficient use of keySet iterator instead of entrySet iterator</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#WMI_WRONG_MAP_ITERATOR">WMI_WRONG_MAP_ITERATOR</a></td>
-<td>209</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletTilesApplicationContext"></a><section>
-<h2>org.apache.tiles.servlet.context.ServletTilesApplicationContext</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getResources(String) is or uses a map or set of URLs, which can be a performance hog</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#DMI_COLLECTION_OF_URLS">DMI_COLLECTION_OF_URLS</a></td>
-<td>105</td>
-<td>High</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getResources(String) is or uses a map or set of URLs, which can be a performance hog</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#DMI_COLLECTION_OF_URLS">DMI_COLLECTION_OF_URLS</a></td>
-<td>106</td>
-<td>High</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getApplicationScope() may expose internal representation by returning ServletTilesApplicationContext.applicationScope</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>83</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getContext() may expose internal representation by returning ServletTilesApplicationContext.servletContext</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>74</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getInitParams() may expose internal representation by returning ServletTilesApplicationContext.initParam</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>94</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getServletContext() may expose internal representation by returning ServletTilesApplicationContext.servletContext</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>117</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.initialize(ServletContext) may expose internal representation by storing an externally mutable object into ServletTilesApplicationContext.servletContext</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>129</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getResources(String) is or uses a map or set of URLs, which can be a performance hog</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#DMI_COLLECTION_OF_URLS">DMI_COLLECTION_OF_URLS</a></td>
-<td>105</td>
-<td>High</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getResources(String) is or uses a map or set of URLs, which can be a performance hog</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#DMI_COLLECTION_OF_URLS">DMI_COLLECTION_OF_URLS</a></td>
-<td>106</td>
-<td>High</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getApplicationScope() may expose internal representation by returning ServletTilesApplicationContext.applicationScope</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>83</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getContext() may expose internal representation by returning ServletTilesApplicationContext.servletContext</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>74</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getInitParams() may expose internal representation by returning ServletTilesApplicationContext.initParam</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>94</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.getServletContext() may expose internal representation by returning ServletTilesApplicationContext.servletContext</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>117</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesApplicationContext.initialize(ServletContext) may expose internal representation by storing an externally mutable object into ServletTilesApplicationContext.servletContext</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>129</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletTilesContextFactory"></a><section>
-<h2>org.apache.tiles.servlet.context.ServletTilesContextFactory</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>instanceof will always return true for all non-null values in org.apache.tiles.servlet.context.ServletTilesContextFactory.init(Map), since all org.apache.tiles.servlet.context.ServletTilesApplicationContextFactory are instances of org.apache.tiles.Initializable</td>
-<td>STYLE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_VACUOUS_INSTANCEOF">BC_VACUOUS_INSTANCEOF</a></td>
-<td>80</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>instanceof will always return true for all non-null values in org.apache.tiles.servlet.context.ServletTilesContextFactory.init(Map), since all org.apache.tiles.servlet.context.ServletTilesApplicationContextFactory are instances of org.apache.tiles.Initializable</td>
-<td>STYLE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#BC_VACUOUS_INSTANCEOF">BC_VACUOUS_INSTANCEOF</a></td>
-<td>80</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.ServletTilesRequestContext"></a><section>
-<h2>org.apache.tiles.servlet.context.ServletTilesRequestContext</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getHeader() may expose internal representation by returning ServletTilesRequestContext.header</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>153</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getHeaderValues() may expose internal representation by returning ServletTilesRequestContext.headerValues</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>164</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getOutputStream() may expose internal representation by returning ServletTilesRequestContext.outputStream</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>272</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getParam() may expose internal representation by returning ServletTilesRequestContext.param</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>175</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getParamValues() may expose internal representation by returning ServletTilesRequestContext.paramValues</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>186</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getPrintWriter() may expose internal representation by returning ServletTilesRequestContext.writer</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>285</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getRequestObjects() may expose internal representation by returning ServletTilesRequestContext.requestObjects</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>310</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getRequestScope() may expose internal representation by returning ServletTilesRequestContext.requestScope</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>197</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getResponse() may expose internal representation by returning ServletTilesRequestContext.response</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>320</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getSessionScope() may expose internal representation by returning ServletTilesRequestContext.sessionScope</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>208</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.initialize(HttpServletRequest, HttpServletResponse) may expose internal representation by storing an externally mutable object into ServletTilesRequestContext.response</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>335</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>RequestDispatcher populated with user controlled parameters</td>
-<td>SECURITY</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#REQUESTDISPATCHER_FILE_DISCLOSURE">REQUESTDISPATCHER_FILE_DISCLOSURE</a></td>
-<td>241</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>RequestDispatcher populated with user controlled parameters</td>
-<td>SECURITY</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#REQUESTDISPATCHER_FILE_DISCLOSURE">REQUESTDISPATCHER_FILE_DISCLOSURE</a></td>
-<td>260</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getHeader() may expose internal representation by returning ServletTilesRequestContext.header</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>153</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getHeaderValues() may expose internal representation by returning ServletTilesRequestContext.headerValues</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>164</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getOutputStream() may expose internal representation by returning ServletTilesRequestContext.outputStream</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>272</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getParam() may expose internal representation by returning ServletTilesRequestContext.param</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>175</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getParamValues() may expose internal representation by returning ServletTilesRequestContext.paramValues</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>186</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getPrintWriter() may expose internal representation by returning ServletTilesRequestContext.writer</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>285</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getRequestObjects() may expose internal representation by returning ServletTilesRequestContext.requestObjects</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>310</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getRequestScope() may expose internal representation by returning ServletTilesRequestContext.requestScope</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>197</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getResponse() may expose internal representation by returning ServletTilesRequestContext.response</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>320</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.getSessionScope() may expose internal representation by returning ServletTilesRequestContext.sessionScope</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
-<td>208</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.context.ServletTilesRequestContext.initialize(HttpServletRequest, HttpServletResponse) may expose internal representation by storing an externally mutable object into ServletTilesRequestContext.response</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>335</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>RequestDispatcher populated with user controlled parameters</td>
-<td>SECURITY</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#REQUESTDISPATCHER_FILE_DISCLOSURE">REQUESTDISPATCHER_FILE_DISCLOSURE</a></td>
-<td>241</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>RequestDispatcher populated with user controlled parameters</td>
-<td>SECURITY</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#REQUESTDISPATCHER_FILE_DISCLOSURE">REQUESTDISPATCHER_FILE_DISCLOSURE</a></td>
-<td>260</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.web.startup.TilesFilter$ServletConfigAdapter"></a><section>
-<h2>org.apache.tiles.web.startup.TilesFilter$ServletConfigAdapter</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>Should org.apache.tiles.web.startup.TilesFilter$ServletConfigAdapter be a _static_ inner class?</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SIC_INNER_SHOULD_BE_STATIC">SIC_INNER_SHOULD_BE_STATIC</a></td>
-<td>159</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Should org.apache.tiles.web.startup.TilesFilter$ServletConfigAdapter be a _static_ inner class?</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SIC_INNER_SHOULD_BE_STATIC">SIC_INNER_SHOULD_BE_STATIC</a></td>
-<td>159</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.web.util.ServletContextAdapter$CompositeEnumeration"></a><section>
-<h2>org.apache.tiles.web.util.ServletContextAdapter$CompositeEnumeration</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>Should org.apache.tiles.web.util.ServletContextAdapter$CompositeEnumeration be a _static_ inner class?</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SIC_INNER_SHOULD_BE_STATIC">SIC_INNER_SHOULD_BE_STATIC</a></td>
-<td>233</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Should org.apache.tiles.web.util.ServletContextAdapter$CompositeEnumeration be a _static_ inner class?</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SIC_INNER_SHOULD_BE_STATIC">SIC_INNER_SHOULD_BE_STATIC</a></td>
-<td>233</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.web.util.TilesDispatchServlet"></a><section>
-<h2>org.apache.tiles.web.util.TilesDispatchServlet</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>This use of org/slf4j/Logger.info(Ljava/lang/String;)V might be used to include CRLF characters into log messages</td>
-<td>SECURITY</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#CRLF_INJECTION_LOGS">CRLF_INJECTION_LOGS</a></td>
-<td>98</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>This use of org/slf4j/Logger.info(Ljava/lang/String;)V might be used to include CRLF characters into log messages</td>
-<td>SECURITY</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#CRLF_INJECTION_LOGS">CRLF_INJECTION_LOGS</a></td>
-<td>98</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.web.util.TilesDispatchServlet$DefaultMutator"></a><section>
-<h2>org.apache.tiles.web.util.TilesDispatchServlet$DefaultMutator</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>Should org.apache.tiles.web.util.TilesDispatchServlet$DefaultMutator be a _static_ inner class?</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SIC_INNER_SHOULD_BE_STATIC">SIC_INNER_SHOULD_BE_STATIC</a></td>
-<td>131</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Should org.apache.tiles.web.util.TilesDispatchServlet$DefaultMutator be a _static_ inner class?</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SIC_INNER_SHOULD_BE_STATIC">SIC_INNER_SHOULD_BE_STATIC</a></td>
-<td>131</td>
-<td>Medium</td></tr></table></section><a name="org.apache.tiles.servlet.context.wildcard.WildcardServletTilesApplicationContext"></a><section>
-<h2>org.apache.tiles.servlet.context.wildcard.WildcardServletTilesApplicationContext</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>The class name org.apache.tiles.servlet.context.wildcard.WildcardServletTilesApplicationContext shadows the simple name of the superclass org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#NM_SAME_SIMPLE_NAME_AS_SUPERCLASS">NM_SAME_SIMPLE_NAME_AS_SUPERCLASS</a></td>
-<td>48</td>
-<td>High</td></tr>
-<tr class="a">
-<td>The class name org.apache.tiles.servlet.context.wildcard.WildcardServletTilesApplicationContext shadows the simple name of the superclass org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#NM_SAME_SIMPLE_NAME_AS_SUPERCLASS">NM_SAME_SIMPLE_NAME_AS_SUPERCLASS</a></td>
-<td>48</td>
-<td>High</td></tr></table></section><a name="org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext"></a><section>
-<h2>org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext.getResources(String) is or uses a map or set of URLs, which can be a performance hog</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#DMI_COLLECTION_OF_URLS">DMI_COLLECTION_OF_URLS</a></td>
-<td>85</td>
-<td>High</td></tr>
-<tr class="a">
-<td>org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext.getResources(String) is or uses a map or set of URLs, which can be a performance hog</td>
-<td>PERFORMANCE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#DMI_COLLECTION_OF_URLS">DMI_COLLECTION_OF_URLS</a></td>
-<td>90</td>
-<td>High</td></tr>
 <tr class="b">
 <td>org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext.getResources(String) is or uses a map or set of URLs, which can be a performance hog</td>
 <td>PERFORMANCE</td>
