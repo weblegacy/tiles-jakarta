@@ -1,8 +1,11 @@
 # Tiles-Jakarta-Servlet
 
-Copy of [Apache Tiles 2.2.2 Servlet](https://github.com/apache/tiles/tree/tiles-2.2.2/tiles-servlet), adapted for jakarata-servlet (EE9+) and extends with JPMS.
+Copy of
+* [Apache Tiles 2.2.2 Servlet](https://github.com/apache/tiles/tree/tiles-2.2.2/tiles-servlet)
+* [Apache Tiles 2.2.2 Servlet Wildcard](https://github.com/apache/tiles/tree/tiles-2.2.2/tiles-servlet-wildcard)
+adapted for jakarata-servlet (EE9+) and extends with JPMS.
 
-For documentation see [https://weblegacy.github.io/tiles-jakarta-servlet](https://weblegacy.github.io/tiles-jakarta-servlet).
+For documentation see [https://weblegacy.github.io/tiles-jakarta](https://weblegacy.github.io/tiles-jakarta).
 
 ## Versions-Overview
 
@@ -10,7 +13,7 @@ For documentation see [https://weblegacy.github.io/tiles-jakarta-servlet](https:
 |------------:|-------------:|-------------:|--------:|----:|----:|----:|-----:|
 | 1.0.0 - WiP | Jakarta EE 9 |            8 |     5.0 | 3.0 | 4.0 | 3.0 |  2.0 |
 
-## Building Tiles-Jakarta-Servlet
+## Building Tiles-Jakarta
 
 ### Prerequisites
 
