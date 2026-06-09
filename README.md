@@ -1,8 +1,10 @@
 # Tiles-Jakarta-Servlet
 
 Copy of
+
 * [Apache Tiles 2.2.2 Servlet](https://github.com/apache/tiles/tree/tiles-2.2.2/tiles-servlet)
 * [Apache Tiles 2.2.2 Servlet Wildcard](https://github.com/apache/tiles/tree/tiles-2.2.2/tiles-servlet-wildcard)
+
 adapted for jakarata-servlet (EE9+) and extends with JPMS.
 
 For documentation see [https://weblegacy.github.io/tiles-jakarta](https://weblegacy.github.io/tiles-jakarta).
@@ -39,7 +41,7 @@ For documentation see [https://weblegacy.github.io/tiles-jakarta](https://webleg
    `mvn clean site-deploy`
 5. Generate Assemblies  
    `mvn package`
-8. Deploy all artifacts to `Central-Repo`  
+6. Deploy all artifacts to `Central-Repo`  
    * `mvn deploy` for SNAPSHOTs
    * `mvn -Prelease clean deploy` for releases
 
