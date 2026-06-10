@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html","k":"18"},{"p":"org.apache.tiles.servlet.wildcard","l":"WildcardServletTilesApplicationContextTest.MockClassLoader"},{"p":"org.apache.tiles.servlet.wildcard","l":"WildcardServletTilesApplicationContextTest"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"org.apache.tiles.servlet.wildcard","l":"WildcardServletTilesApplicationContextTest.MockClassLoader"},{"p":"org.apache.tiles.servlet.wildcard","l":"WildcardServletTilesApplicationContextTest"}]

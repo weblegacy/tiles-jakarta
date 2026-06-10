@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"org.apache.tiles.servlet.context.wildcard"},{"l":"org.apache.tiles.servlet.wildcard"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"org.apache.tiles.servlet.context.wildcard"},{"l":"org.apache.tiles.servlet.wildcard"}]
