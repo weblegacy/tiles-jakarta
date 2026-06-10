@@ -39,7 +39,7 @@ For documentation see [https://weblegacy.github.io/tiles-jakarta](https://webleg
    `mvn site site:stage`  
 4. Publish site-documentation  
    1. `mvn clean site site:stage`
-   2. `mvn scm-publish:pubish-scm`
+   2. `mvn scm-publish:publish-scm`
 5. Generate Assemblies  
    `mvn package`
 6. Deploy all artifacts to `Central-Repo`  
