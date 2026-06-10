@@ -36,9 +36,10 @@ For documentation see [https://weblegacy.github.io/tiles-jakarta](https://webleg
    * to skip tests  
      add `-DskipTests` for example `mvn  -DskipTests verify`
 3. Generate site-documentation  
-   `mvn site`  
+   `mvn site site:stage`  
 4. Publish site-documentation  
-   `mvn clean site-deploy`
+   1. `mvn clean site site:stage`
+   2. `mvn scm-publish:pubish-scm`
 5. Generate Assemblies  
    `mvn package`
 6. Deploy all artifacts to `Central-Repo`  
