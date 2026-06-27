@@ -38,7 +38,7 @@ import org.apache.shale.test.mock.MockHttpSession;
 import org.apache.shale.test.mock.MockServletContext;
 import org.apache.tiles.TilesApplicationContext;
 import org.apache.tiles.context.TilesRequestContext;
-import org.easymock.classextension.EasyMock;
+import org.easymock.EasyMock;
 
 /**
  * @version $Rev$ $Date$
