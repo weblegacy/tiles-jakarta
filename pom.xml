@@ -54,6 +54,8 @@
         <javaVersion>8</javaVersion>
         <fludioVersion>2.1.0</fludioVersion>
         <surefireVersion>3.6.0-M1</surefireVersion>
+        <slf4jVersion>1.5.8</slf4jVersion>
+        <springVersion>2.5.6</springVersion>
 
         <tiles2Version>2.2.2</tiles2Version>
 
@@ -345,25 +347,44 @@
                 <artifactId>tiles2-servlet</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.tiles</groupId>
+                <artifactId>tiles-api</artifactId>
+                <version>${tiles2Version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.apache.tiles</groupId>
                 <artifactId>tiles-core</artifactId>
                 <version>${tiles2Version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4jVersion}</version>
+            </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-jdk14</artifactId>
-                <version>1.5.8</version>
+                <version>${slf4jVersion}</version>
             </dependency>
+
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
                 <version>2.5</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${springVersion}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-web</artifactId>
-                <version>2.5.6</version>
+                <version>${springVersion}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>commons-logging</groupId>
