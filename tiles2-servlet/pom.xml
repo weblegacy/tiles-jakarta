@@ -13,6 +13,11 @@
     <name>Tiles 2 - Jakarta-Servlet support</name>
     <description>Tiles servlet support, to enable use of Tiles inside a Jakarta-Servlet environment.</description>
 
+    <properties>
+        <!-- Configuration properties for the OSGi maven-bundle-plugin -->
+        <tiles.osgi.symbolicName>org.apache.tiles.servlet</tiles.osgi.symbolicName>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.tiles</groupId>
