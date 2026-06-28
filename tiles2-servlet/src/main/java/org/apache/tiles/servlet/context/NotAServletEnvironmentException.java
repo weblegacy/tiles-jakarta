@@ -33,6 +33,8 @@ import org.apache.tiles.TilesException;
  */
 public class NotAServletEnvironmentException extends TilesException {
 
+    private static final long serialVersionUID = -1587941890665893936L;
+
     /**
      * Constructor.
      *

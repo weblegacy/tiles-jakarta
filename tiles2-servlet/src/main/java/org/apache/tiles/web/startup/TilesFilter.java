@@ -46,6 +46,8 @@ import org.apache.tiles.definition.util.DefinitionsFactoryUtil;
 @Deprecated
 public class TilesFilter extends TilesServlet implements Filter {
 
+    private static final long serialVersionUID = -2130513159373472856L;
+
     /**
      * The filter configuration object we are associated with. If this value is null, this filter
      * instance is not currently configured.

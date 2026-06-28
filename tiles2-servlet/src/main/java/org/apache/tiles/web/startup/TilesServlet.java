@@ -36,6 +36,8 @@ import org.apache.tiles.startup.TilesInitializer;
 @Deprecated
 public class TilesServlet extends AbstractTilesInitializerServlet {
 
+    private static final long serialVersionUID = 931113837980461848L;
+
     /**
      * Creates a new instance of {@link BasicTilesInitializer}. Override it to use a different
      * initializer.

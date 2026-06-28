@@ -40,6 +40,8 @@ import org.apache.tiles.web.util.ServletContextAdapter;
  */
 public abstract class AbstractTilesInitializerServlet extends HttpServlet {
 
+    private static final long serialVersionUID = -1899410038963230532L;
+
     /**
      * The private listener instance, that is used to initialize Tiles container.
      */

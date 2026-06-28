@@ -39,6 +39,8 @@ import org.slf4j.LoggerFactory;
  */
 public class TilesDispatchServlet extends HttpServlet {
 
+    private static final long serialVersionUID = -8466491324726692202L;
+
     /**
      * Init parameter to define the key of the container to use.
      *

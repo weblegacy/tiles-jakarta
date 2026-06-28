@@ -33,6 +33,8 @@ import org.apache.tiles.web.startup.AbstractTilesInitializerServlet;
  */
 public class SimpleTilesInitializerServlet extends AbstractTilesInitializerServlet {
 
+    private static final long serialVersionUID = -176363779104480780L;
+
     /** {@inheritDoc} */
     @Override
     protected TilesInitializer createTilesInitializer() {
