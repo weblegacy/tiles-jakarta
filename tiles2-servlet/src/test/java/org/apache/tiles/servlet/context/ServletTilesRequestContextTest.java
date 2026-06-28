@@ -25,19 +25,16 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
-
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import junit.framework.TestCase;
-
-import org.apache.shale.test.mock.MockHttpServletRequest;
-import org.apache.shale.test.mock.MockHttpServletResponse;
-import org.apache.shale.test.mock.MockHttpSession;
-import org.apache.shale.test.mock.MockServletContext;
 import org.apache.tiles.TilesApplicationContext;
 import org.apache.tiles.context.TilesRequestContext;
+import org.apache.tiles.servlet.mock.MockHttpServletRequest;
+import org.apache.tiles.servlet.mock.MockHttpServletResponse;
+import org.apache.tiles.servlet.mock.MockHttpSession;
+import org.apache.tiles.servlet.mock.MockServletContext;
 import org.easymock.EasyMock;
 
 /**

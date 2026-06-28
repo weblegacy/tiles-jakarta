@@ -402,11 +402,6 @@
                 <artifactId>easymock</artifactId>
                 <version>5.6.0</version>
             </dependency>
-            <dependency>
-                <groupId>org.apache.shale</groupId>
-                <artifactId>shale-test</artifactId>
-                <version>1.0.5</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 

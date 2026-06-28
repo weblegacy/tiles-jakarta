@@ -18,16 +18,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.web.util;
 
 import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Set;
-
-import org.apache.shale.test.mock.MockServletConfig;
-import org.apache.shale.test.mock.MockServletContext;
-
 import junit.framework.TestCase;
+import org.apache.tiles.servlet.mock.MockServletConfig;
+import org.apache.tiles.servlet.mock.MockServletContext;
 
 /**
  * Tests {@link ServletContextAdapter}.
