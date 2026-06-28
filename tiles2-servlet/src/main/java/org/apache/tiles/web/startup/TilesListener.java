@@ -18,10 +18,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.web.startup;
 
 import javax.servlet.ServletContext;
-
 import org.apache.tiles.TilesApplicationContext;
 import org.apache.tiles.TilesContainer;
 import org.apache.tiles.factory.AbstractTilesContainerFactory;
@@ -33,16 +33,21 @@ import org.apache.tiles.startup.TilesInitializer;
  * Listener for the initialization of the Tiles container.
  *
  * @version $Rev$ $Date$
+ *
  * @deprecated Please extend {@link AbstractTilesListener}.
  */
+@Deprecated
 public class TilesListener extends AbstractTilesListener {
 
     /**
-     * Creates a new instance of {@link BasicTilesInitializer}. Override it to use a different initializer.
+     * Creates a new instance of {@link BasicTilesInitializer}. Override it to use a different
+     * initializer.
      *
      * @return The Tiles servlet-based initializer.
+     *
      * @since 2.1.2
      */
+    @Deprecated
     protected TilesInitializer createTilesInitializer() {
         return new BasicTilesInitializer();
     }
@@ -51,9 +56,12 @@ public class TilesListener extends AbstractTilesListener {
      * Creates a Tiles container.
      *
      * @param context The servlet context to use.
+     *
      * @return The created container.
+     *
      * @deprecated Extend {@link BasicTilesInitializer}.
      */
+    @Deprecated
     protected TilesContainer createContainer(ServletContext context) {
         TilesApplicationContext applicationContext = new ServletTilesApplicationContext(
                 context);

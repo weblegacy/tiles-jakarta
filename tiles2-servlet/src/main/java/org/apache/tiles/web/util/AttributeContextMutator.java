@@ -18,28 +18,27 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.web.util;
 
+import javax.servlet.ServletRequest;
 import org.apache.tiles.AttributeContext;
 
-import javax.servlet.ServletRequest;
-
 /**
- * It represents an object able to manipulate a <code>AttributeContext</code>.
- * In other words, it is able to add, replace and remove attributes from the
- * <code>AttributeContext</code>.
+ * It represents an object able to manipulate a {@code AttributeContext}. In other words, it is
+ * able to add, replace and remove attributes from the {@code AttributeContext}.
  *
  * @since Tiles 2.0
+ *
  * @version $Rev$ $Date$
  */
 public interface AttributeContextMutator {
 
     /**
-     * Mutate a <code>AttributeContext</code>.
+     * Mutate a {@code AttributeContext}.
      *
      * @param context The attribute context to mutate.
      * @param request The current servlet request.
      */
     void mutate(AttributeContext context, ServletRequest request);
-
 }

@@ -21,6 +21,8 @@
 
 package org.apache.tiles.servlet.context;
 
+import java.util.Map;
+import javax.servlet.ServletContext;
 import org.apache.tiles.Initializable;
 import org.apache.tiles.TilesApplicationContext;
 import org.apache.tiles.context.AbstractTilesApplicationContextFactory;
@@ -28,28 +30,14 @@ import org.apache.tiles.context.TilesContextFactory;
 import org.apache.tiles.context.TilesRequestContext;
 import org.apache.tiles.context.TilesRequestContextFactory;
 
-import javax.servlet.ServletContext;
-import java.util.Map;
-
 /**
- * Creates an instance of the appropriate TilesApplicationContext
- * implementation.
+ * Creates an instance of the appropriate TilesApplicationContext implementation.
  *
  * @version $Rev$ $Date$
- * @deprecated Use {@link ServletTilesApplicationContext} or
- * {@link ServletTilesRequestContext}.
- */
-/**
- * @author PTRNTN77A26E506O
  *
- */
-/**
- * @author PTRNTN77A26E506O
+ * @deprecated Use {@link ServletTilesApplicationContext} or {@link ServletTilesRequestContext}.
  *
- */
-/**
  * @author PTRNTN77A26E506O
- *
  */
 @Deprecated
 public class ServletTilesContextFactory implements TilesContextFactory {
@@ -76,6 +64,7 @@ public class ServletTilesContextFactory implements TilesContextFactory {
     }
 
     /** {@inheritDoc} */
+    @Deprecated
     public void init(Map<String, String> configParameters) {
         if (contextFactory instanceof Initializable) {
             ((Initializable) contextFactory).init(configParameters);
@@ -84,11 +73,13 @@ public class ServletTilesContextFactory implements TilesContextFactory {
     }
 
     /** {@inheritDoc} */
+    @Deprecated
     public TilesApplicationContext createApplicationContext(Object context) {
         return contextFactory.createApplicationContext(context);
     }
 
     /** {@inheritDoc} */
+    @Deprecated
     public TilesRequestContext createRequestContext(TilesApplicationContext context,
                                                     Object... requestItems) {
         return requestContextFactory
@@ -99,7 +90,9 @@ public class ServletTilesContextFactory implements TilesContextFactory {
      * Returns the original servlet context.
      *
      * @param context The application context.
+     *
      * @return The original servlet context, if found.
+     *
      * @deprecated Use {@link TilesApplicationContext#getContext()}.
      */
     @Deprecated

@@ -24,10 +24,11 @@ package org.apache.tiles.servlet.context;
 import org.apache.tiles.TilesException;
 
 /**
- * Exception that indicates that a resource could not be used because it is not
- * in a servlet environment.
+ * Exception that indicates that a resource could not be used because it is not in a servlet
+ * environment.
  *
  * @version $Rev$ $Date$
+ *
  * @since 2.2.0
  */
 public class NotAServletEnvironmentException extends TilesException {
@@ -44,6 +45,7 @@ public class NotAServletEnvironmentException extends TilesException {
      * Constructor.
      *
      * @param message The detail message.
+     *
      * @since 2.2.0
      */
     public NotAServletEnvironmentException(String message) {
@@ -54,6 +56,7 @@ public class NotAServletEnvironmentException extends TilesException {
      * Constructor.
      *
      * @param e The exception to be wrapped.
+     *
      * @since 2.2.0
      */
     public NotAServletEnvironmentException(Exception e) {
@@ -64,7 +67,8 @@ public class NotAServletEnvironmentException extends TilesException {
      * Constructor.
      *
      * @param message The detail message.
-     * @param e The exception to be wrapped.
+     * @param e       The exception to be wrapped.
+     *
      * @since 2.2.0
      */
     public NotAServletEnvironmentException(String message, Exception e) {

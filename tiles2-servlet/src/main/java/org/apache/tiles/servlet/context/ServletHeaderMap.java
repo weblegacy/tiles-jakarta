@@ -18,6 +18,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.servlet.context;
 
 import java.util.ArrayList;
@@ -28,45 +29,41 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.apache.tiles.context.MapEntry;
 
 /**
- * <p>Private implementation of <code>Map</code> for servlet request
- * name-value.</p>
+ * Private implementation of {@code Map} for servlet request name-value.
  *
  * @version $Rev$ $Date$
  */
-
 final class ServletHeaderMap implements Map<String, String> {
-
 
     /**
      * Constructor.
      *
      * @param request The request object to use.
+     *
      * @deprecated Use {@link #ServletHeaderMap(HttpServletRequest,HttpServletResponse)} instead
      */
+    @Deprecated
     public ServletHeaderMap(HttpServletRequest request) {
         this(request, null);
     }
 
-
     /**
      * Constructor.
      *
-     * @param request The request object to use.
+     * @param request  The request object to use.
      * @param response The response object to use.
+     *
      * @since 2.2.0
      */
     public ServletHeaderMap(HttpServletRequest request, HttpServletResponse response) {
         this.request = request;
         this.response = response;
     }
-
 
     /**
      * The request object to use.
@@ -78,18 +75,15 @@ final class ServletHeaderMap implements Map<String, String> {
      */
     private HttpServletResponse response = null;
 
-
     /** {@inheritDoc} */
     public void clear() {
         throw new UnsupportedOperationException();
     }
 
-
     /** {@inheritDoc} */
     public boolean containsKey(Object key) {
         return (request.getHeader(key(key)) != null);
     }
-
 
     /** {@inheritDoc} */
     public boolean containsValue(Object value) {
@@ -101,7 +95,6 @@ final class ServletHeaderMap implements Map<String, String> {
         }
         return (false);
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -116,7 +109,6 @@ final class ServletHeaderMap implements Map<String, String> {
         }
         return (set);
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -136,24 +128,20 @@ final class ServletHeaderMap implements Map<String, String> {
         return retValue;
     }
 
-
     /** {@inheritDoc} */
     public String get(Object key) {
         return (request.getHeader(key(key)));
     }
-
 
     /** {@inheritDoc} */
     public int hashCode() {
         return (request.hashCode());
     }
 
-
     /** {@inheritDoc} */
     public boolean isEmpty() {
         return (size() < 1);
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -166,13 +154,11 @@ final class ServletHeaderMap implements Map<String, String> {
         return (set);
     }
 
-
     /** {@inheritDoc} */
     public String put(String key, String value) {
         response.setHeader(key, value);
         return value;
     }
-
 
     /** {@inheritDoc} */
     public void putAll(Map<? extends String, ? extends String> map) {
@@ -182,12 +168,10 @@ final class ServletHeaderMap implements Map<String, String> {
         }
     }
 
-
     /** {@inheritDoc} */
     public String remove(Object key) {
         throw new UnsupportedOperationException();
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -201,7 +185,6 @@ final class ServletHeaderMap implements Map<String, String> {
         return (n);
     }
 
-
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
     public Collection<String> values() {
@@ -213,13 +196,14 @@ final class ServletHeaderMap implements Map<String, String> {
         return (list);
     }
 
-
     /**
      * Returns the string representation of the key.
      *
      * @param key The key.
+     *
      * @return The string representation of the key.
-     * @throws IllegalArgumentException If the key is <code>null</code>.
+     *
+     * @throws IllegalArgumentException If the key is {@code null}.
      */
     private String key(Object key) {
         if (key == null) {
@@ -230,6 +214,4 @@ final class ServletHeaderMap implements Map<String, String> {
             return (key.toString());
         }
     }
-
-
 }

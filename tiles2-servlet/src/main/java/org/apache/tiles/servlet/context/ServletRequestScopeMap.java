@@ -18,6 +18,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.servlet.context;
 
 import java.util.ArrayList;
@@ -28,20 +29,15 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
 import javax.servlet.ServletRequest;
-
 import org.apache.tiles.context.MapEntry;
 
 /**
- * <p>Private implementation of <code>Map</code> for servlet request
- * attributes.</p>
+ * Private implementation of {@code Map} for servlet request attributes.
  *
  * @version $Rev$ $Date$
  */
-
 final class ServletRequestScopeMap implements Map<String, Object> {
-
 
     /**
      * Constructor.
@@ -52,12 +48,10 @@ final class ServletRequestScopeMap implements Map<String, Object> {
         this.request = request;
     }
 
-
     /**
      * The request object to use.
      */
     private ServletRequest request = null;
-
 
     /** {@inheritDoc} */
     public void clear() {
@@ -67,12 +61,10 @@ final class ServletRequestScopeMap implements Map<String, Object> {
         }
     }
 
-
     /** {@inheritDoc} */
     public boolean containsKey(Object key) {
         return (request.getAttribute(key(key)) != null);
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -90,7 +82,6 @@ final class ServletRequestScopeMap implements Map<String, Object> {
         return (false);
     }
 
-
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
     public Set<Map.Entry<String, Object>> entrySet() {
@@ -104,7 +95,6 @@ final class ServletRequestScopeMap implements Map<String, Object> {
         }
         return (set);
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -124,24 +114,20 @@ final class ServletRequestScopeMap implements Map<String, Object> {
         return retValue;
     }
 
-
     /** {@inheritDoc} */
     public Object get(Object key) {
         return (request.getAttribute(key(key)));
     }
-
 
     /** {@inheritDoc} */
     public int hashCode() {
         return (request.hashCode());
     }
 
-
     /** {@inheritDoc} */
     public boolean isEmpty() {
         return (size() < 1);
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -154,7 +140,6 @@ final class ServletRequestScopeMap implements Map<String, Object> {
         return (set);
     }
 
-
     /** {@inheritDoc} */
     public Object put(String key, Object value) {
         if (value == null) {
@@ -166,7 +151,6 @@ final class ServletRequestScopeMap implements Map<String, Object> {
         return (previous);
     }
 
-
     /** {@inheritDoc} */
     public void putAll(Map<? extends String, ? extends Object> map) {
         Iterator<? extends String> keys = map.keySet().iterator();
@@ -176,7 +160,6 @@ final class ServletRequestScopeMap implements Map<String, Object> {
         }
     }
 
-
     /** {@inheritDoc} */
     public Object remove(Object key) {
         String skey = key(key);
@@ -184,7 +167,6 @@ final class ServletRequestScopeMap implements Map<String, Object> {
         request.removeAttribute(skey);
         return (previous);
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -198,7 +180,6 @@ final class ServletRequestScopeMap implements Map<String, Object> {
         return (n);
     }
 
-
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
     public Collection<Object> values() {
@@ -210,13 +191,14 @@ final class ServletRequestScopeMap implements Map<String, Object> {
         return (list);
     }
 
-
     /**
      * Returns the string representation of the key.
      *
      * @param key The key.
+     *
      * @return The string representation of the key.
-     * @throws IllegalArgumentException If the key is <code>null</code>.
+     *
+     * @throws IllegalArgumentException If the key is {@code null}.
      */
     private String key(Object key) {
         if (key == null) {
@@ -227,6 +209,4 @@ final class ServletRequestScopeMap implements Map<String, Object> {
             return (key.toString());
         }
     }
-
-
 }

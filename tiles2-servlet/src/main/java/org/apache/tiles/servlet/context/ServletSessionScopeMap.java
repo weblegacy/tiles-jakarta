@@ -18,6 +18,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.servlet.context;
 
 import java.util.ArrayList;
@@ -28,22 +29,16 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
 import javax.servlet.http.HttpServletRequest;
-
 import javax.servlet.http.HttpSession;
-
 import org.apache.tiles.context.MapEntry;
 
 /**
- * <p>Private implementation of <code>Map</code> for HTTP session
- * attributes.</p>
+ * Private implementation of {@code Map} for HTTP session attributes.
  *
  * @version $Rev$ $Date$
  */
-
 final class ServletSessionScopeMap implements Map<String, Object> {
-
 
     /**
      * Constructor.
@@ -70,7 +65,6 @@ final class ServletSessionScopeMap implements Map<String, Object> {
         }
     }
 
-
     /** {@inheritDoc} */
     public boolean containsKey(Object key) {
         HttpSession session = request.getSession(false);
@@ -80,7 +74,6 @@ final class ServletSessionScopeMap implements Map<String, Object> {
 
         return (session.getAttribute(key(key)) != null);
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -99,7 +92,6 @@ final class ServletSessionScopeMap implements Map<String, Object> {
         return (false);
     }
 
-
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
     public Set<Map.Entry<String, Object>> entrySet() {
@@ -116,7 +108,6 @@ final class ServletSessionScopeMap implements Map<String, Object> {
         }
         return (set);
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -143,7 +134,6 @@ final class ServletSessionScopeMap implements Map<String, Object> {
         return retValue;
     }
 
-
     /** {@inheritDoc} */
     public Object get(Object key) {
         HttpSession session = request.getSession(false);
@@ -153,7 +143,6 @@ final class ServletSessionScopeMap implements Map<String, Object> {
 
         return (session.getAttribute(key(key)));
     }
-
 
     /** {@inheritDoc} */
     public int hashCode() {
@@ -165,12 +154,10 @@ final class ServletSessionScopeMap implements Map<String, Object> {
         return (session.hashCode());
     }
 
-
     /** {@inheritDoc} */
     public boolean isEmpty() {
         return (size() < 1);
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -186,7 +173,6 @@ final class ServletSessionScopeMap implements Map<String, Object> {
         return (set);
     }
 
-
     /** {@inheritDoc} */
     public Object put(String key, Object value) {
         HttpSession session = request.getSession();
@@ -199,7 +185,6 @@ final class ServletSessionScopeMap implements Map<String, Object> {
         return (previous);
     }
 
-
     /** {@inheritDoc} */
     public void putAll(Map<? extends String, ? extends Object> map) {
         HttpSession session = request.getSession();
@@ -209,7 +194,6 @@ final class ServletSessionScopeMap implements Map<String, Object> {
             session.setAttribute(key, map.get(key));
         }
     }
-
 
     /** {@inheritDoc} */
     public Object remove(Object key) {
@@ -223,7 +207,6 @@ final class ServletSessionScopeMap implements Map<String, Object> {
         session.removeAttribute(skey);
         return (previous);
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -240,7 +223,6 @@ final class ServletSessionScopeMap implements Map<String, Object> {
         return (n);
     }
 
-
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
     public Collection<Object> values() {
@@ -255,13 +237,14 @@ final class ServletSessionScopeMap implements Map<String, Object> {
         return (list);
     }
 
-
     /**
      * Returns the string representation of the key.
      *
      * @param key The key.
+     *
      * @return The string representation of the key.
-     * @throws IllegalArgumentException If the key is <code>null</code>.
+     *
+     * @throws IllegalArgumentException If the key is {@code null}.
      */
     private String key(Object key) {
         if (key == null) {
@@ -272,6 +255,4 @@ final class ServletSessionScopeMap implements Map<String, Object> {
             return (key.toString());
         }
     }
-
-
 }

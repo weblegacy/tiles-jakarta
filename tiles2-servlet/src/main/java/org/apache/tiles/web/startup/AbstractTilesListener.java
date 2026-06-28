@@ -18,12 +18,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.web.startup;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-
 import org.apache.tiles.TilesException;
 import org.apache.tiles.servlet.context.ServletTilesApplicationContext;
 import org.apache.tiles.servlet.context.ServletUtil;
@@ -51,8 +51,7 @@ public abstract class AbstractTilesListener implements ServletContextListener {
     protected TilesInitializer initializer;
 
     /**
-     * Initialize the TilesContainer and place it
-     * into service.
+     * Initialize the TilesContainer and place it into service.
      *
      * @param event The intercepted event.
      */

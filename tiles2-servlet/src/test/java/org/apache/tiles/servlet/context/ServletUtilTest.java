@@ -23,12 +23,10 @@ package org.apache.tiles.servlet.context;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletRequest;
-
+import junit.framework.TestCase;
 import org.apache.tiles.TilesContainer;
 import org.apache.tiles.access.TilesAccess;
 import org.easymock.EasyMock;
-
-import junit.framework.TestCase;
 
 /**
  * Tests {@link ServletUtil}.
@@ -127,12 +125,11 @@ public class ServletUtilTest extends TestCase {
      * Tests {@link ServletUtil#getCurrentContainer(ServletRequest, ServletContext)}.
      */
     public void testGetCurrentContainer() {
-        ServletRequest request = EasyMock.createMock(ServletRequest.class);
-        ServletContext context = EasyMock.createMock(ServletContext.class);
-        TilesContainer defaultContainer = EasyMock.createMock(
-                TilesContainer.class);
-        TilesContainer alternateContainer = EasyMock.createMock(
-                TilesContainer.class);
+        final ServletRequest request = EasyMock.createMock(ServletRequest.class);
+        final ServletContext context = EasyMock.createMock(ServletContext.class);
+        final TilesContainer defaultContainer = EasyMock.createMock(TilesContainer.class);
+        final TilesContainer alternateContainer = EasyMock.createMock(TilesContainer.class);
+
         EasyMock.expect(request.getAttribute(ServletUtil
                 .CURRENT_CONTAINER_ATTRIBUTE_NAME)).andReturn(null);
         EasyMock.expect(context.getAttribute(TilesAccess.CONTAINER_ATTRIBUTE))

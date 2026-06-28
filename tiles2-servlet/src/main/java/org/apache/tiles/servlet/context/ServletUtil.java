@@ -22,12 +22,10 @@
 package org.apache.tiles.servlet.context;
 
 import java.io.IOException;
-
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
-
 import org.apache.tiles.ArrayStack;
 import org.apache.tiles.TilesApplicationContext;
 import org.apache.tiles.TilesContainer;
@@ -39,11 +37,11 @@ import org.apache.tiles.util.TilesIOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 /**
  * Utilities for Tiles servlet support.
  *
  * @version $Rev$ $Date$
+ *
  * @since 2.0.6
  */
 public final class ServletUtil {
@@ -51,10 +49,12 @@ public final class ServletUtil {
     /**
      * The name of the attribute that will contain the compose stack.
      */
-    public static final String COMPOSE_STACK_ATTRIBUTE_NAME = "org.apache.tiles.template.COMPOSE_STACK";
+    public static final String COMPOSE_STACK_ATTRIBUTE_NAME =
+        "org.apache.tiles.template.COMPOSE_STACK";
 
     /**
      * Name of the attribute used to store the force-include option.
+     *
      * @since 2.0.6
      */
     public static final String FORCE_INCLUDE_ATTRIBUTE_NAME =
@@ -73,10 +73,12 @@ public final class ServletUtil {
     }
 
     /**
-     * Returns true if forced include of the result is needed.
+     * Returns {@code true} if forced include of the result is needed.
      *
      * @param request The HTTP request.
-     * @return If <code>true</code> the include operation must be forced.
+     *
+     * @return If {@code true} the include operation must be forced.
+     *
      * @since 2.0.6
      */
     public static boolean isForceInclude(HttpServletRequest request) {
@@ -88,9 +90,9 @@ public final class ServletUtil {
     /**
      * Sets the option that enables the forced include of the response.
      *
-     * @param request The HTTP request.
-     * @param forceInclude If <code>true</code> the include operation must be
-     * forced.
+     * @param request      The HTTP request.
+     * @param forceInclude If {@code true} the include operation must be forced.
+     *
      * @since 2.0.6
      */
     public static void setForceInclude(HttpServletRequest request,
@@ -105,7 +107,9 @@ public final class ServletUtil {
      * Returns the default Tiles container.
      *
      * @param context The servlet context to use.
+     *
      * @return The default Tiles container.
+     *
      * @since 2.1.2
      */
     public static TilesContainer getContainer(ServletContext context) {
@@ -116,9 +120,11 @@ public final class ServletUtil {
      * Returns a specific Tiles container.
      *
      * @param context The servlet context to use.
-     * @param key The key under which the container is stored. If null, the
-     * default container will be returned.
+     * @param key     The key under which the container is stored. If {@code null}, the default
+     *                container will be returned.
+     *
      * @return The requested Tiles container.
+     *
      * @since 2.1.2
      */
     public static TilesContainer getContainer(ServletContext context, String key) {
@@ -131,8 +137,9 @@ public final class ServletUtil {
     /**
      * Configures the default container to be used in the application.
      *
-     * @param context The servlet context object to use.
+     * @param context   The servlet context object to use.
      * @param container The container object to set.
+     *
      * @since 2.1.2
      */
     public static void setContainer(ServletContext context,
@@ -143,9 +150,10 @@ public final class ServletUtil {
     /**
      * Configures the container to be used in the application.
      *
-     * @param context The servlet context object to use.
+     * @param context   The servlet context object to use.
      * @param container The container object to set.
-     * @param key The key under which the container will be stored.
+     * @param key       The key under which the container will be stored.
+     *
      * @since 2.1.2
      */
     public static void setContainer(ServletContext context,
@@ -172,7 +180,8 @@ public final class ServletUtil {
      *
      * @param request The request to use.
      * @param context The servlet context to use.
-     * @param key The key under which the container is stored.
+     * @param key     The key under which the container is stored.
+     *
      * @since 2.1.0
      */
     public static void setCurrentContainer(ServletRequest request,
@@ -189,9 +198,10 @@ public final class ServletUtil {
     /**
      * Sets the current container to use in web pages.
      *
-     * @param request The request to use.
-     * @param context The servlet context to use.
+     * @param request   The request to use.
+     * @param context   The servlet context to use.
      * @param container The container to use as the current container.
+     *
      * @since 2.1.0
      */
     public static void setCurrentContainer(ServletRequest request,
@@ -208,7 +218,9 @@ public final class ServletUtil {
      *
      * @param request The request to use.
      * @param context The servlet context to use.
+     *
      * @return The current Tiles container to use in web pages.
+     *
      * @since 2.1.0
      */
     public static TilesContainer getCurrentContainer(ServletRequest request,
@@ -226,9 +238,11 @@ public final class ServletUtil {
     /**
      * Wraps a ServletException to create an IOException with the root cause if present.
      *
-     * @param ex The exception to wrap.
+     * @param ex      The exception to wrap.
      * @param message The message of the exception.
+     *
      * @return The wrapped exception.
+     *
      * @since 2.1.1
      */
     public static IOException wrapServletException(ServletException ex,
@@ -247,11 +261,12 @@ public final class ServletUtil {
     }
 
     /**
-     * Returns the compose stack, that is used by the tags to compose
-     * definitions, attributes, etc.
+     * Returns the compose stack, that is used by the tags to compose definitions, attributes, etc.
      *
      * @param request The HTTP request.
+     *
      * @return The compose stack.
+     *
      * @since 2.2.0
      */
     @SuppressWarnings("unchecked")
@@ -269,9 +284,12 @@ public final class ServletUtil {
      * Opens a TilesRequestContext until it finds a ServletTilesRequestContext.
      *
      * @param request The request to open.
+     *
      * @return The servlet-based request context.
-     * @throws NotAServletEnvironmentException If a servlet-based request
-     * context could not be found.
+     *
+     * @throws NotAServletEnvironmentException If a servlet-based request context could not be
+     *                                         found.
+     *
      * @since 2.2.0
      */
     public static ServletTilesRequestContext getServletRequest(TilesRequestContext request) {
@@ -285,7 +303,8 @@ public final class ServletUtil {
                 return (ServletTilesRequestContext) currentRequest;
             }
             if (!(currentRequest instanceof TilesRequestContextWrapper)) {
-                throw new NotAServletEnvironmentException("Not a Servlet environment, not supported");
+                throw new NotAServletEnvironmentException(
+                        "Not a Servlet environment, not supported");
             }
             currentRequest = ((TilesRequestContextWrapper) currentRequest).getWrappedRequest();
         }
@@ -295,14 +314,18 @@ public final class ServletUtil {
      * Gets a servlet context from a TilesApplicationContext.
      *
      * @param applicationContext The application context to analyze.
+     *
      * @return The servlet context.
-     * @throws NotAServletEnvironmentException If the application context is not
-     * servlet-based.
+     *
+     * @throws NotAServletEnvironmentException If the application context is not servlet-based.
+     *
      * @since 2.2.0
      */
     public static ServletContext getServletContext(TilesApplicationContext applicationContext) {
         if (applicationContext instanceof ServletTilesApplicationContext) {
-            return (ServletContext) ((ServletTilesApplicationContext) applicationContext).getContext();
+            final ServletTilesApplicationContext ret =
+                    ((ServletTilesApplicationContext) applicationContext);
+            return (ServletContext) ret.getContext();
         }
 
         throw new NotAServletEnvironmentException("Not a Servlet-based environment");

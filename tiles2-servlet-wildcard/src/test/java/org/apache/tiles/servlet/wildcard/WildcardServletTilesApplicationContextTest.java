@@ -18,24 +18,20 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.servlet.wildcard;
-
-import junit.framework.TestCase;
-
-import org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext;
-import org.easymock.EasyMock;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Enumeration;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.Vector;
-import java.util.HashSet;
-
 import javax.servlet.ServletContext;
-
+import junit.framework.TestCase;
+import org.easymock.EasyMock;
 
 /**
  * Tests {@link WildcardServletTilesApplicationContext}.
@@ -129,8 +125,7 @@ public class WildcardServletTilesApplicationContextTest extends TestCase {
         /**
          * Constructor.
          *
-         * @throws MalformedURLException If the URL is not valid (that should
-         * not happen).
+         * @throws MalformedURLException If the URL is not valid (that should not happen).
          */
         public MockClassLoader() throws MalformedURLException {
             testPropertiesResources = new Vector<URL>();

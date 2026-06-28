@@ -18,6 +18,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.web.startup;
 
 import org.apache.tiles.startup.BasicTilesInitializer;
@@ -27,17 +28,23 @@ import org.apache.tiles.startup.TilesInitializer;
  * Initialization Servlet.
  *
  * @see org.apache.tiles.web.startup.TilesListener
+ *
  * @version $Rev$ $Date$
+ *
  * @deprecated Please extend {@link AbstractTilesInitializerServlet}.
  */
+@Deprecated
 public class TilesServlet extends AbstractTilesInitializerServlet {
 
     /**
-     * Creates a new instance of {@link BasicTilesInitializer}. Override it to use a different initializer.
+     * Creates a new instance of {@link BasicTilesInitializer}. Override it to use a different
+     * initializer.
      *
      * @return The Tiles servlet-based initializer.
+     *
      * @since 2.1.2
      */
+    @Deprecated
     protected TilesInitializer createTilesInitializer() {
         return new BasicTilesInitializer();
     }

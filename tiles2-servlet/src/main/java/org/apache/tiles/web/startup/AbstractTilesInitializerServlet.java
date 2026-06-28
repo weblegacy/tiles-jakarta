@@ -18,12 +18,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.web.startup;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
-
 import org.apache.tiles.servlet.context.ServletTilesApplicationContext;
 import org.apache.tiles.startup.TilesInitializer;
 import org.apache.tiles.web.util.ServletContextAdapter;
@@ -33,14 +33,15 @@ import org.apache.tiles.web.util.ServletContextAdapter;
  * {@link #createTilesInitializer()} to initialize Tiles.
  *
  * @see org.apache.tiles.web.startup.TilesListener
+ *
  * @version $Rev$ $Date$
+ *
  * @since 2.2.0
  */
 public abstract class AbstractTilesInitializerServlet extends HttpServlet {
 
     /**
-     * The private listener instance, that is used to initialize Tiles
-     * container.
+     * The private listener instance, that is used to initialize Tiles container.
      */
     private TilesInitializer initializer;
 
@@ -62,10 +63,11 @@ public abstract class AbstractTilesInitializerServlet extends HttpServlet {
     }
 
     /**
-     * Creates a new instance of {@link TilesInitializer}. Implement it to use
-     * your custom initializer.
+     * Creates a new instance of {@link TilesInitializer}. Implement it to use your custom
+     * initializer.
      *
      * @return The Tiles servlet-based initializer.
+     *
      * @since 2.2.0
      */
     protected abstract TilesInitializer createTilesInitializer();

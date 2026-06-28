@@ -18,6 +18,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.servlet.context;
 
 import java.util.ArrayList;
@@ -28,21 +29,16 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
-
 import org.apache.tiles.context.MapEntry;
 
 /**
- * <p>Private implementation of <code>Map</code> for servlet parameter
- * name-value.</p>
+ * Private implementation of {@code Map} for servlet parameter name-value.
  *
  * @version $Rev$ $Date$
  */
-
 final class ServletParamMap implements Map<String, String> {
-
 
     /**
      * Constructor.
@@ -53,24 +49,20 @@ final class ServletParamMap implements Map<String, String> {
         this.request = request;
     }
 
-
     /**
      * The request object to use.
      */
     private HttpServletRequest request = null;
-
 
     /** {@inheritDoc} */
     public void clear() {
         throw new UnsupportedOperationException();
     }
 
-
     /** {@inheritDoc} */
     public boolean containsKey(Object key) {
         return (request.getParameter(key(key)) != null);
     }
-
 
     /** {@inheritDoc} */
     public boolean containsValue(Object value) {
@@ -82,7 +74,6 @@ final class ServletParamMap implements Map<String, String> {
         }
         return (false);
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -97,7 +88,6 @@ final class ServletParamMap implements Map<String, String> {
         }
         return (set);
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -117,24 +107,20 @@ final class ServletParamMap implements Map<String, String> {
         return retValue;
     }
 
-
     /** {@inheritDoc} */
     public String get(Object key) {
         return (request.getParameter(key(key)));
     }
-
 
     /** {@inheritDoc} */
     public int hashCode() {
         return (request.hashCode());
     }
 
-
     /** {@inheritDoc} */
     public boolean isEmpty() {
         return (size() < 1);
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -147,24 +133,20 @@ final class ServletParamMap implements Map<String, String> {
         return (set);
     }
 
-
     /** {@inheritDoc} */
     public String put(String key, String value) {
         throw new UnsupportedOperationException();
     }
-
 
     /** {@inheritDoc} */
     public void putAll(Map<? extends String, ? extends String> map) {
         throw new UnsupportedOperationException();
     }
 
-
     /** {@inheritDoc} */
     public String remove(Object key) {
         throw new UnsupportedOperationException();
     }
-
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
@@ -178,7 +160,6 @@ final class ServletParamMap implements Map<String, String> {
         return (n);
     }
 
-
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
     public Collection<String> values() {
@@ -190,13 +171,14 @@ final class ServletParamMap implements Map<String, String> {
         return (list);
     }
 
-
     /**
      * Returns the string representation of the key.
      *
      * @param key The key.
+     *
      * @return The string representation of the key.
-     * @throws IllegalArgumentException If the key is <code>null</code>.
+     *
+     * @throws IllegalArgumentException If the key is {@code null}.
      */
     private String key(Object key) {
         if (key == null) {
@@ -207,6 +189,4 @@ final class ServletParamMap implements Map<String, String> {
             return (key.toString());
         }
     }
-
-
 }

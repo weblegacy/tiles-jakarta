@@ -23,7 +23,6 @@ package org.apache.tiles.servlet.context;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletResponseWrapper;
 
@@ -45,7 +44,8 @@ public class ExternalWriterHttpServletResponse extends
      * Constructor.
      *
      * @param response The response to wrap.
-     * @param writer The print writer to use, instead of the response's one.
+     * @param writer   The print writer to use, instead of the response's one.
+     *
      * @since 2.2.0
      */
     public ExternalWriterHttpServletResponse(HttpServletResponse response, PrintWriter writer) {

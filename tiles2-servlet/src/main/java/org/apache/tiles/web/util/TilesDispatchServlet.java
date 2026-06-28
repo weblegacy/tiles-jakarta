@@ -18,16 +18,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.web.util;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.apache.tiles.AttributeContext;
 import org.apache.tiles.TilesContainer;
 import org.apache.tiles.reflect.ClassUtil;
@@ -36,8 +35,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Tiles dispatching servlet.  Used to invoke
- * a definition directly.
+ * Tiles dispatching servlet. Used to invoke a definition directly.
  */
 public class TilesDispatchServlet extends HttpServlet {
 
@@ -52,8 +50,7 @@ public class TilesDispatchServlet extends HttpServlet {
     /**
      * The logging object.
      */
-    private final Logger log = LoggerFactory
-            .getLogger(TilesDispatchServlet.class);
+    private final Logger log = LoggerFactory.getLogger(TilesDispatchServlet.class);
 
     /**
      * The key under which the container is stored.
@@ -61,11 +58,9 @@ public class TilesDispatchServlet extends HttpServlet {
     private String containerKey;
 
     /**
-     * The object that will mutate the attribute context so that it uses
-     * different attributes.
+     * The object that will mutate the attribute context so that it uses different attributes.
      */
     private AttributeContextMutator mutator;
-
 
     /** {@inheritDoc} */
     public void init() throws ServletException {
@@ -104,6 +99,7 @@ public class TilesDispatchServlet extends HttpServlet {
      * Returns the called definition name for the given request.
      *
      * @param request The request to parse.
+     *
      * @return The definition name to render.
      */
     protected String getDefinitionName(HttpServletRequest request) {

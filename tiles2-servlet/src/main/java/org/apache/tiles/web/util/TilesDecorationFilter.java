@@ -18,13 +18,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.web.util;
 
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
-
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -33,7 +33,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-
 import org.apache.tiles.Attribute;
 import org.apache.tiles.AttributeContext;
 import org.apache.tiles.TilesContainer;
@@ -43,39 +42,40 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Decoration Filter.  Intercepts all requests and decorates them
- * with the configured definition.
- * <p/>
- * For example, given the following config:
- * <xmp>
+ * Decoration Filter. Intercepts all requests and decorates them with the configured definition.
+ *
+ * <p>For example, given the following config:</p>
+ * <pre>
+ * {@code
  * <filter>
- * <filter-name>Tiles Decoration Filter</filter-name>
- * <filter-class>org.apache.tiles.web.TilesDecorationFilter</filter-class>
- * <init-param>
- * <param-name>definition</param-name>
- * <param-value>test.definition</param-value>
- * </init-param>
- * <init-param>
- * <param-name>attribute-name</param-name>
- * <param-value>body</param-value>
- * </init-param>
- * <init-param>
- * <param-name>prevent-token</param-name>
- * <param-value>layout</param-value>
- * </init-param>
+ *   <filter-name>Tiles Decoration Filter</filter-name>
+ *   <filter-class>org.apache.tiles.web.TilesDecorationFilter</filter-class>
+ *   <init-param>
+ *     <param-name>definition</param-name>
+ *     <param-value>test.definition</param-value>
+ *   </init-param>
+ *   <init-param>
+ *     <param-name>attribute-name</param-name>
+ *     <param-value>body</param-value>
+ *   </init-param>
+ *   <init-param>
+ *     <param-name>prevent-token</param-name>
+ *     <param-value>layout</param-value>
+ *   </init-param>
  * </filter>
- * <p/>
+ *
  * <filter-mapping>
- * <filter-name>Tiles Decoration Filter</filter-name>
- * <url-pattern>/testdecorationfilter.jsp</url-pattern>
- * <dispatcher>REQUEST</dispatcher>
+ *   <filter-name>Tiles Decoration Filter</filter-name>
+ *   <url-pattern>/testdecorationfilter.jsp</url-pattern>
+ *   <dispatcher>REQUEST</dispatcher>
  * </filter-mapping>
- * </xmp>
- * The filter will intercept all requests to the indicated url pattern
- * store the initial request path as the "body"  attribute and then render the
- * "test.definition" definition.  The filter will only redecorate those requests
- * which do not contain the request attribute associated with the prevent token
- * "layout".
+ * }
+ * </pre>
+ *
+ * <p>The filter will intercept all requests to the indicated url pattern store the initial request
+ * path as the "body" attribute and then render the "test.definition" definition. The filter will
+ * only redecorate those requests which do not contain the request attribute associated with the
+ * prevent token "layout".</p>
  */
 public class TilesDecorationFilter implements Filter {
 
@@ -103,8 +103,7 @@ public class TilesDecorationFilter implements Filter {
     private String containerKey;
 
     /**
-     * The name of the definition attribute used to
-     * pass on the request.
+     * The name of the definition attribute used to pass on the request.
      */
     private String definitionAttributeName = "content";
 
@@ -114,21 +113,19 @@ public class TilesDecorationFilter implements Filter {
     private String definitionName = "layout";
 
     /**
-     * Token used to prevent re-decoration of requests.
-     * This token is used to prevent infinate loops on
-     * filters configured to match wildcards.
+     * Token used to prevent re-decoration of requests. This token is used to prevent infinite
+     * loops on filters configured to match wildcards.
      */
     private String preventDecorationToken;
 
     /**
-     * Stores a map of the type "mask -> definition": when a definition name
-     * mask is identified, it is substituted with the configured definition.
+     * Stores a map of the type "mask -> definition": when a definition name mask is identified, it
+     * is substituted with the configured definition.
      */
     private Map<String, String> alternateDefinitions;
 
     /**
-     * The object that will mutate the attribute context so that it uses
-     * different attributes.
+     * The object that will mutate the attribute context so that it uses different attributes.
      */
     private AttributeContextMutator mutator = null;
 
@@ -186,8 +183,8 @@ public class TilesDecorationFilter implements Filter {
     }
 
     /**
-     * Creates the alternate definitions map, to map a mask of definition names
-     * to a configured definition.
+     * Creates the alternate definitions map, to map a mask of definition names to a configured
+     * definition.
      *
      * @return The alternate definitions map.
      */
@@ -213,7 +210,6 @@ public class TilesDecorationFilter implements Filter {
     public void destroy() {
         filterConfig = null;
     }
-
 
     /**
      * {@inheritDoc}
@@ -242,6 +238,7 @@ public class TilesDecorationFilter implements Filter {
      * Returns the final definition to render for the given request.
      *
      * @param request The request object.
+     *
      * @return The final definition name.
      */
     private String getDefinitionForRequest(ServletRequest request) {
@@ -258,10 +255,10 @@ public class TilesDecorationFilter implements Filter {
     }
 
     /**
-     * Returns the request base, i.e. the the URL to calculate all the relative
-     * paths.
+     * Returns the request base, i.e. the the URL to calculate all the relative paths.
      *
      * @param request The request object to use.
+     *
      * @return The request base.
      */
     private String getRequestBase(ServletRequest request) {
@@ -294,9 +291,11 @@ public class TilesDecorationFilter implements Filter {
      * Checks if the prevent evaluation token is present.
      *
      * @param request The HTTP request object.
-     * @return <code>true</code> if the token is present.
+     *
+     * @return {@code true} if the token is present.
      */
     private boolean isPreventTokenPresent(ServletRequest request) {
-        return preventDecorationToken != null && request.getAttribute(preventDecorationToken) != null;
+        return preventDecorationToken != null
+                && request.getAttribute(preventDecorationToken) != null;
     }
 }

@@ -25,23 +25,21 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.servlet.ServletContext;
-
 import org.apache.tiles.servlet.context.ServletTilesApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.web.context.support.ServletContextResourcePatternResolver;
 
 /**
- * Servlet-based implementation of the TilesApplicationContext interface that
- * can resolve resources even using wildcards.
+ * Servlet-based implementation of the TilesApplicationContext interface that can resolve resources
+ * even using wildcards.
  *
  * @version $Rev$ $Date$
+ *
  * @since 2.2.1
  */
-public class WildcardServletTilesApplicationContext extends
-        ServletTilesApplicationContext {
+public class WildcardServletTilesApplicationContext extends ServletTilesApplicationContext {
 
     /**
      * The pattern resolver.
@@ -54,6 +52,7 @@ public class WildcardServletTilesApplicationContext extends
      * Constructor.
      *
      * @param servletContext The servlet context.
+     *
      * @since 2.2.1
      */
     public WildcardServletTilesApplicationContext(ServletContext servletContext) {

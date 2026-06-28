@@ -18,6 +18,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.web.util;
 
 import java.io.InputStream;
@@ -26,7 +27,6 @@ import java.net.URL;
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Set;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
@@ -34,8 +34,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
 /**
- * Adapts a servlet config and a servlet context to become a unique servlet
- * context.
+ * Adapts a servlet config and a servlet context to become a unique servlet context.
  *
  * @version $Rev$ $Date$
  */
@@ -48,11 +47,9 @@ public class ServletContextAdapter implements ServletContext {
     private ServletContext rootContext;
 
     /**
-     * The union of init parameters of {@link ServletConfig} and
-     * {@link ServletContext}.
+     * The union of init parameters of {@link ServletConfig} and {@link ServletContext}.
      */
     private Hashtable<String, String> initParameters;
-
 
     /**
      * Constructor.
@@ -98,7 +95,7 @@ public class ServletContextAdapter implements ServletContext {
     }
 
     /** {@inheritDoc} */
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("rawtypes")
     public Set getResourcePaths(String string) {
         return rootContext.getResourcePaths(string);
     }
@@ -129,13 +126,13 @@ public class ServletContextAdapter implements ServletContext {
     }
 
     /** {@inheritDoc} */
-    @SuppressWarnings({ "unchecked" })
+    @SuppressWarnings("rawtypes")
     public Enumeration getServlets() {
-        return rootContext.getServlets();  //To change body of implemented methods use File | Settings | File Templates.
+        return rootContext.getServlets();
     }
 
     /** {@inheritDoc} */
-    @SuppressWarnings({ "unchecked" })
+    @SuppressWarnings("rawtypes")
     public Enumeration getServletNames() {
         return rootContext.getServletNames();
     }
@@ -171,7 +168,7 @@ public class ServletContextAdapter implements ServletContext {
     }
 
     /** {@inheritDoc} */
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("rawtypes")
     public Enumeration getInitParameterNames() {
         return initParameters.keys();
     }
@@ -182,7 +179,7 @@ public class ServletContextAdapter implements ServletContext {
     }
 
     /** {@inheritDoc} */
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("rawtypes")
     public Enumeration getAttributeNames() {
         return rootContext.getAttributeNames();
     }
@@ -210,7 +207,7 @@ public class ServletContextAdapter implements ServletContext {
     /**
      * Composes an enumeration into a single one.
      */
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("rawtypes")
     class CompositeEnumeration implements Enumeration {
 
         /**
@@ -223,11 +220,10 @@ public class ServletContextAdapter implements ServletContext {
          */
         private Enumeration second;
 
-
         /**
          * Constructor.
          *
-         * @param first The first enumeration to consider.
+         * @param first  The first enumeration to consider.
          * @param second The second enumeration to consider.
          */
         public CompositeEnumeration(Enumeration first, Enumeration second) {

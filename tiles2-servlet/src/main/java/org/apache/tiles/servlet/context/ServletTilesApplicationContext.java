@@ -18,20 +18,19 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.servlet.context;
-
-import org.apache.tiles.TilesApplicationContext;
-import org.apache.tiles.context.TilesRequestContext;
-
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.HashSet;
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.apache.tiles.TilesApplicationContext;
+import org.apache.tiles.context.TilesRequestContext;
 
 /**
  * Servlet-based implementation of the TilesApplicationContext interface.
@@ -45,20 +44,15 @@ public class ServletTilesApplicationContext implements TilesApplicationContext {
      */
     private ServletContext servletContext;
 
-
     /**
-     * <p>The lazily instantiated <code>Map</code> of application scope
-     * attributes.</p>
+     * The lazily instantiated {@code Map} of application scope attributes.
      */
     private Map<String, Object> applicationScope = null;
 
-
     /**
-     * <p>The lazily instantiated <code>Map</code> of context initialization
-     * parameters.</p>
+     * The lazily instantiated {@code Map} of context initialization parameters.
      */
     private Map<String, String> initParam = null;
-
 
     /**
      * Creates a new instance of ServletTilesApplicationContext.
@@ -83,7 +77,6 @@ public class ServletTilesApplicationContext implements TilesApplicationContext {
         return (applicationScope);
 
     }
-
 
     /** {@inheritDoc} */
     public Map<String, String> getInitParams() {
@@ -111,18 +104,19 @@ public class ServletTilesApplicationContext implements TilesApplicationContext {
      * Returns the servlet context.
      *
      * @return The servlet context.
+     *
      * @deprecated Use {@link #getContext()}.
      */
+    @Deprecated
     public ServletContext getServletContext() {
         return servletContext;
     }
 
-
     /**
-     * <p>Initialize (or reinitialize) this {@link TilesApplicationContext} instance
-     * for the specified Servlet API objects.</p>
+     * Initialize (or reinitialize) this {@link TilesApplicationContext} instance for the specified
+     * Servlet API objects.
      *
-     * @param context The <code>ServletContext</code> for this web application
+     * @param context The {@code ServletContext} for this web application
      */
     public void initialize(ServletContext context) {
         // Save the specified Servlet API object references
@@ -131,12 +125,10 @@ public class ServletTilesApplicationContext implements TilesApplicationContext {
         // Perform other setup as needed
     }
 
-
     /**
-     * <p>Release references to allocated resources acquired in
-     * <code>initialize()</code> of via subsequent processing.  After this
-     * method is called, subsequent calls to any other method than
-     * <code>initialize()</code> will return undefined results.</p>
+     * Release references to allocated resources acquired in {@code initialize()} of via subsequent
+     * processing. After this method is called, subsequent calls to any other method than
+     * {@code initialize()} will return undefined results.
      */
     public void release() {
 
@@ -152,13 +144,15 @@ public class ServletTilesApplicationContext implements TilesApplicationContext {
     /**
      * Creates a servlet context for a given request/response pair.
      *
-     * @param request The request object.
+     * @param request  The request object.
      * @param response The response object.
+     *
      * @return The corresponding Tiles request context.
-     * @deprecated Use
-     * {@link org.apache.tiles.context.TilesContextFactory#createRequestContext(TilesApplicationContext, Object...)}
-     * .
+     *
+     * @deprecated Use {@link org.apache.tiles.context.TilesContextFactory
+     *             #createRequestContext(TilesApplicationContext, Object...)}.
      */
+    @Deprecated
     public TilesRequestContext createRequestContext(Object request, Object response) {
         if (request instanceof HttpServletRequest) {
             return new ServletTilesRequestContext(

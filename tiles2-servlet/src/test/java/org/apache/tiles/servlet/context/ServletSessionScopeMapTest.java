@@ -21,15 +21,15 @@
 
 package org.apache.tiles.servlet.context;
 
-import java.util.Vector;
 import java.util.Map;
+import java.util.Vector;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import junit.framework.TestCase;
 import org.easymock.EasyMock;
 
 /**
- * Tests {@link ServletSessionScopeMap} behaviour.
+ * Tests {@link ServletSessionScopeMap} behavior.
  *
  * @version $Rev$ $Date$
  */

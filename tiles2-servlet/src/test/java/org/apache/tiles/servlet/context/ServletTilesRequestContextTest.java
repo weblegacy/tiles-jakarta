@@ -38,6 +38,8 @@ import org.apache.tiles.servlet.mock.MockServletContext;
 import org.easymock.EasyMock;
 
 /**
+ * Tests {@link ServletTilesRequestContext} behavior.
+ *
  * @version $Rev$ $Date$
  */
 public class ServletTilesRequestContextTest extends TestCase {
@@ -79,11 +81,11 @@ public class ServletTilesRequestContextTest extends TestCase {
                 initParams);
         MockHttpSession session = new MockHttpSession(servletContext);
         MockHttpServletRequest request = new MockHttpServletRequest(session);
-        MockHttpServletResponse response = new MockHttpServletResponse();
         request.addHeader("Content-Type", "text/html");
         request.addParameter("myParam", "value1");
         request.addParameter("myParam", "value2");
 
+        MockHttpServletResponse response = new MockHttpServletResponse();
         context = new ServletTilesRequestContext(applicationContext, request,
                 response);
 
@@ -297,9 +299,8 @@ public class ServletTilesRequestContextTest extends TestCase {
      */
     private <K, V> void doTestReadMap(Map<K, V> currentMap, Class<K> keyClass,
             Class<V> valueClass, String mapName) {
-        int size1, size2;
-        size1 = currentMap.keySet().size();
-        size2 = currentMap.entrySet().size();
+        int size1 = currentMap.keySet().size();
+        int size2 = currentMap.entrySet().size();
         assertEquals("The map" + mapName
                 + " has keySet and entrySet of different size", size1, size2);
         for (K key : currentMap.keySet()) {

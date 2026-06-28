@@ -21,32 +21,36 @@
 
 package org.apache.tiles.servlet.context;
 
+import java.util.Map;
+import javax.servlet.ServletContext;
 import org.apache.tiles.Initializable;
 import org.apache.tiles.TilesApplicationContext;
 import org.apache.tiles.context.AbstractTilesApplicationContextFactory;
 
-import javax.servlet.ServletContext;
-import java.util.Map;
-
 /**
- * Creates an instance of the appropriate TilesApplicationContext implementation
- * under a servlet environment.
+ * Creates an instance of the appropriate TilesApplicationContext implementation under a servlet
+ * environment.
  *
  * @version $Rev$ $Date$
+ *
  * @since 2.1.1
- * @deprecated Create an instance of {@link ServletTilesApplicationContext}
- * yourself, by implementing {@link org.apache.tiles.startup.TilesInitializer}
- * or extending {@link org.apache.tiles.startup.AbstractTilesInitializer} and
- * overriding <code>createTilesApplicationContext</code> method.<br>
+ *
+ * @deprecated Create an instance of {@link ServletTilesApplicationContext} yourself, by
+ *             implementing {@link org.apache.tiles.startup.TilesInitializer} or extending
+ *             {@link org.apache.tiles.startup.AbstractTilesInitializer} and overriding
+ *             {@code createTilesApplicationContext} method.
  */
+@Deprecated
 public class ServletTilesApplicationContextFactory extends
         AbstractTilesApplicationContextFactory implements Initializable {
 
     /** {@inheritDoc} */
+    @Deprecated
     public void init(Map<String, String> configParameters) {
     }
 
     /** {@inheritDoc} */
+    @Deprecated
     public TilesApplicationContext createApplicationContext(Object context) {
         if (context instanceof ServletContext) {
             ServletContext servletContext = (ServletContext) context;

@@ -24,13 +24,17 @@ package org.apache.tiles.servlet.context.wildcard;
 import javax.servlet.ServletContext;
 
 /**
- * Servlet-based implementation of the TilesApplicationContext interface that
- * can resolve resources even using wildcards.
+ * Servlet-based implementation of the TilesApplicationContext interface that can resolve resources
+ * even using wildcards.
  *
  * @version $Rev$ $Date$
+ *
  * @since 2.1.0
- * @deprecated Use {@link org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext}.
+ *
+ * @deprecated Use
+ *             {@link org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext}.
  */
+@Deprecated
 public class WildcardServletTilesApplicationContext extends
         org.apache.tiles.servlet.wildcard.WildcardServletTilesApplicationContext {
 
@@ -38,12 +42,14 @@ public class WildcardServletTilesApplicationContext extends
      * Constructor.
      *
      * @param servletContext The servlet context.
+     *
      * @since 2.1.0
+     *
      * @deprecated Use
-     * {@link WildcardServletTilesApplicationContext
-     * #WildcardServletTilesApplicationContext(ServletContext)}
-     * .
+     *             {@link WildcardServletTilesApplicationContext
+     *             #WildcardServletTilesApplicationContext(ServletContext)}.
      */
+    @Deprecated
     public WildcardServletTilesApplicationContext(ServletContext servletContext) {
         super(servletContext);
     }

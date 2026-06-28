@@ -18,6 +18,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 package org.apache.tiles.servlet.context;
 
 import java.io.IOException;
@@ -26,19 +27,17 @@ import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.Locale;
 import java.util.Map;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.apache.tiles.TilesApplicationContext;
 import org.apache.tiles.context.TilesApplicationContextWrapper;
 import org.apache.tiles.context.TilesRequestContext;
 
 /**
- * Servlet-based implementation of the TilesApplicationContext interface.
+ * Servlet-based implementation of the {@link TilesApplicationContext} interface.
  *
  * @version $Rev$ $Date$
  */
@@ -71,51 +70,42 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
     private PrintWriter writer;
 
     /**
-     * <p>The lazily instantiated <code>Map</code> of header name-value
-     * combinations (immutable).</p>
+     * The lazily instantiated {@code Map} of header name-value combinations (immutable).
      */
     private Map<String, String> header = null;
 
-
     /**
-     * <p>The lazily instantitated <code>Map</code> of header name-values
-     * combinations (immutable).</p>
+     * The lazily instantiated {@code Map} of header name-values combinations (immutable).
      */
     private Map<String, String[]> headerValues = null;
 
-
     /**
-     * <p>The lazily instantiated <code>Map</code> of request
-     * parameter name-value.</p>
+     * The lazily instantiated {@code Map} of request parameter name-value.
      */
     private Map<String, String> param = null;
 
-
     /**
-     * <p>The lazily instantiated <code>Map</code> of request
-     * parameter name-values.</p>
+     * The lazily instantiated {@code Map} of request parameter name-values.
      */
     private Map<String, String[]> paramValues = null;
 
     /**
-     * <p>The lazily instantiated <code>Map</code> of request scope
-     * attributes.</p>
+     * The lazily instantiated {@code Map} of request scope attributes.
      */
     private Map<String, Object> requestScope = null;
 
     /**
-     * <p>The lazily instantiated <code>Map</code> of session scope
-     * attributes.</p>
+     * The lazily instantiated {@code Map} of session scope attributes.
      */
     private Map<String, Object> sessionScope = null;
-
 
     /**
      * Creates a new instance of ServletTilesRequestContext.
      *
      * @param applicationContext The application context.
-     * @param request The request object.
-     * @param response The response object.
+     * @param request            The request object.
+     * @param response           The response object.
+     *
      * @since 2.1.1
      */
     public ServletTilesRequestContext(
@@ -129,11 +119,11 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
      * Creates a new instance of ServletTilesRequestContext.
      *
      * @param servletContext The servlet context.
-     * @param request The request object.
-     * @param response The response object.
-     * @deprecated Use
-     * {@link #ServletTilesRequestContext(TilesApplicationContext, HttpServletRequest, HttpServletResponse)}
-     * .
+     * @param request        The request object.
+     * @param response       The response object.
+     *
+     * @deprecated Use {@link #ServletTilesRequestContext(TilesApplicationContext,
+     *             HttpServletRequest, HttpServletResponse)}.
      */
     @Deprecated
     public ServletTilesRequestContext(ServletContext servletContext,
@@ -142,7 +132,6 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
         super(new ServletTilesApplicationContext(servletContext));
         initialize(request, response);
     }
-
 
     /** {@inheritDoc} */
     public Map<String, String> getHeader() {
@@ -154,7 +143,6 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
 
     }
 
-
     /** {@inheritDoc} */
     public Map<String, String[]> getHeaderValues() {
 
@@ -164,7 +152,6 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
         return (headerValues);
 
     }
-
 
     /** {@inheritDoc} */
     public Map<String, String> getParam() {
@@ -176,7 +163,6 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
 
     }
 
-
     /** {@inheritDoc} */
     public Map<String, String[]> getParamValues() {
 
@@ -187,7 +173,6 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
 
     }
 
-
     /** {@inheritDoc} */
     public Map<String, Object> getRequestScope() {
 
@@ -197,7 +182,6 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
         return (requestScope);
 
     }
-
 
     /** {@inheritDoc} */
     public Map<String, Object> getSessionScope() {
@@ -227,6 +211,7 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
      * Forwards to a path.
      *
      * @param path The path to forward to.
+     *
      * @throws IOException If something goes wrong during the operation.
      */
     protected void forward(String path) throws IOException {
@@ -244,7 +229,6 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
                     + path + "'.");
         }
     }
-
 
     /** {@inheritDoc} */
     public void include(String path) throws IOException {
@@ -321,11 +305,11 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
     }
 
     /**
-     * <p>Initialize (or reinitialize) this {@link ServletTilesRequestContext} instance
-     * for the specified Servlet API objects.</p>
+     * Initialize (or reinitialize) this {@link ServletTilesRequestContext} instance for the
+     * specified Servlet API objects.
      *
-     * @param request  The <code>HttpServletRequest</code> for this request
-     * @param response The <code>HttpServletResponse</code> for this request
+     * @param request  The {@code HttpServletRequest} for this request
+     * @param response The {@code HttpServletResponse} for this request
      */
     public void initialize(HttpServletRequest request,
                            HttpServletResponse response) {
@@ -336,12 +320,10 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
         // Perform other setup as needed
     }
 
-
     /**
-     * <p>Release references to allocated resources acquired in
-     * <code>initialize()</code> of via subsequent processing.  After this
-     * method is called, subsequent calls to any other method than
-     * <code>initialize()</code> will return undefined results.</p>
+     * Release references to allocated resources acquired in {@code initialize()} of via subsequent
+     * processing. After this method is called, subsequent calls to any other method than
+     * {@code initialize()} will return undefined results.
      */
     public void release() {
         // Release references to allocated collections
@@ -357,23 +339,22 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
         response = null;
     }
 
-
     /** {@inheritDoc} */
     public boolean isUserInRole(String role) {
         return request.isUserInRole(role);
     }
 
     /**
-     * Wraps a ServletException to create an IOException with the root cause if
-     * present.
+     * Wraps a ServletException to create an IOException with the root cause if present.
      *
-     * @param ex The exception to wrap.
+     * @param ex      The exception to wrap.
      * @param message The message of the exception.
+     *
      * @return The wrapped exception.
+     *
      * @since 2.0.6
-     * @deprecated Use
-     * {@link ServletUtil#wrapServletException(ServletException,String)}
-     * instead.
+     *
+     * @deprecated Use {@link ServletUtil#wrapServletException(ServletException,String)} instead.
      */
     @Deprecated
     protected IOException wrapServletException(ServletException ex,

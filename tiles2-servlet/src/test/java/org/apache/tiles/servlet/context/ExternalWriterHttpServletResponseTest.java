@@ -21,16 +21,16 @@
 
 package org.apache.tiles.servlet.context;
 
-import static org.junit.Assert.*;
-import static org.easymock.EasyMock.*;
+import static org.easymock.EasyMock.createMock;
+import static org.easymock.EasyMock.replay;
+import static org.easymock.EasyMock.verify;
+import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.io.Writer;
-
 import javax.servlet.http.HttpServletResponse;
-
 import org.junit.Test;
 
 /**
@@ -39,7 +39,8 @@ import org.junit.Test;
 public class ExternalWriterHttpServletResponseTest {
 
     /**
-     * Test method for {@link org.apache.tiles.servlet.context.ExternalWriterHttpServletResponse#getWriter()}.
+     * Test method for {@link ExternalWriterHttpServletResponse#getWriter()}.
+     *
      * @throws IOException If something goes wrong.
      */
     @Test
@@ -53,5 +54,4 @@ public class ExternalWriterHttpServletResponseTest {
         assertEquals(printWriter, response.getWriter());
         verify(wrappedResponse);
     }
-
 }
