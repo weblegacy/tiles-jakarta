@@ -82,8 +82,7 @@ public final class ServletUtil {
      * @since 2.0.6
      */
     public static boolean isForceInclude(HttpServletRequest request) {
-        Boolean retValue = (Boolean) request
-                .getAttribute(ServletUtil.FORCE_INCLUDE_ATTRIBUTE_NAME);
+        Boolean retValue = (Boolean) request.getAttribute(FORCE_INCLUDE_ATTRIBUTE_NAME);
         return retValue != null && retValue.booleanValue();
     }
 
@@ -95,12 +94,9 @@ public final class ServletUtil {
      *
      * @since 2.0.6
      */
-    public static void setForceInclude(HttpServletRequest request,
-            boolean forceInclude) {
+    public static void setForceInclude(HttpServletRequest request, boolean forceInclude) {
         Boolean retValue = Boolean.valueOf(forceInclude);
-        request.setAttribute(
-                ServletUtil.FORCE_INCLUDE_ATTRIBUTE_NAME,
-                retValue);
+        request.setAttribute(FORCE_INCLUDE_ATTRIBUTE_NAME, retValue);
     }
 
     /**
@@ -324,7 +320,7 @@ public final class ServletUtil {
     public static ServletContext getServletContext(TilesApplicationContext applicationContext) {
         if (applicationContext instanceof ServletTilesApplicationContext) {
             final ServletTilesApplicationContext ret =
-                    ((ServletTilesApplicationContext) applicationContext);
+                    (ServletTilesApplicationContext) applicationContext;
             return (ServletContext) ret.getContext();
         }
 

@@ -82,7 +82,7 @@ final class ServletHeaderMap implements Map<String, String> {
 
     /** {@inheritDoc} */
     public boolean containsKey(Object key) {
-        return (request.getHeader(key(key)) != null);
+        return request.getHeader(key(key)) != null;
     }
 
     /** {@inheritDoc} */
@@ -90,10 +90,10 @@ final class ServletHeaderMap implements Map<String, String> {
         Iterator<String> values = values().iterator();
         while (values.hasNext()) {
             if (value.equals(values.next())) {
-                return (true);
+                return true;
             }
         }
-        return (false);
+        return false;
     }
 
     /** {@inheritDoc} */
@@ -107,7 +107,7 @@ final class ServletHeaderMap implements Map<String, String> {
             set.add(new MapEntry<String, String>(key, request.getHeader(key),
                     false));
         }
-        return (set);
+        return set;
     }
 
     /** {@inheritDoc} */
@@ -130,17 +130,17 @@ final class ServletHeaderMap implements Map<String, String> {
 
     /** {@inheritDoc} */
     public String get(Object key) {
-        return (request.getHeader(key(key)));
+        return request.getHeader(key(key));
     }
 
     /** {@inheritDoc} */
     public int hashCode() {
-        return (request.hashCode());
+        return request.hashCode();
     }
 
     /** {@inheritDoc} */
     public boolean isEmpty() {
-        return (size() < 1);
+        return size() < 1;
     }
 
     /** {@inheritDoc} */
@@ -151,7 +151,7 @@ final class ServletHeaderMap implements Map<String, String> {
         while (keys.hasMoreElements()) {
             set.add(keys.nextElement());
         }
-        return (set);
+        return set;
     }
 
     /** {@inheritDoc} */
@@ -182,7 +182,7 @@ final class ServletHeaderMap implements Map<String, String> {
             keys.nextElement();
             n++;
         }
-        return (n);
+        return n;
     }
 
     /** {@inheritDoc} */
@@ -193,7 +193,7 @@ final class ServletHeaderMap implements Map<String, String> {
         while (keys.hasMoreElements()) {
             list.add(request.getHeader(keys.nextElement()));
         }
-        return (list);
+        return list;
     }
 
     /**
@@ -209,9 +209,9 @@ final class ServletHeaderMap implements Map<String, String> {
         if (key == null) {
             throw new IllegalArgumentException();
         } else if (key instanceof String) {
-            return ((String) key);
+            return (String) key;
         } else {
-            return (key.toString());
+            return key.toString();
         }
     }
 }

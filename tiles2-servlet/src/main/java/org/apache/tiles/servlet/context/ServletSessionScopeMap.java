@@ -72,7 +72,7 @@ final class ServletSessionScopeMap implements Map<String, Object> {
             return false;
         }
 
-        return (session.getAttribute(key(key)) != null);
+        return session.getAttribute(key(key)) != null;
     }
 
     /** {@inheritDoc} */
@@ -80,16 +80,16 @@ final class ServletSessionScopeMap implements Map<String, Object> {
     public boolean containsValue(Object value) {
         HttpSession session = request.getSession(false);
         if (session == null || value == null) {
-            return (false);
+            return false;
         }
         Enumeration<String> keys = session.getAttributeNames();
         while (keys.hasMoreElements()) {
             Object next = session.getAttribute(keys.nextElement());
             if (next == value) {
-                return (true);
+                return true;
             }
         }
-        return (false);
+        return false;
     }
 
     /** {@inheritDoc} */
@@ -106,7 +106,7 @@ final class ServletSessionScopeMap implements Map<String, Object> {
                         session.getAttribute(key), true));
             }
         }
-        return (set);
+        return set;
     }
 
     /** {@inheritDoc} */
@@ -141,7 +141,7 @@ final class ServletSessionScopeMap implements Map<String, Object> {
             return null;
         }
 
-        return (session.getAttribute(key(key)));
+        return session.getAttribute(key(key));
     }
 
     /** {@inheritDoc} */
@@ -151,12 +151,12 @@ final class ServletSessionScopeMap implements Map<String, Object> {
             return 0;
         }
 
-        return (session.hashCode());
+        return session.hashCode();
     }
 
     /** {@inheritDoc} */
     public boolean isEmpty() {
-        return (size() < 1);
+        return size() < 1;
     }
 
     /** {@inheritDoc} */
@@ -170,19 +170,19 @@ final class ServletSessionScopeMap implements Map<String, Object> {
                 set.add(keys.nextElement());
             }
         }
-        return (set);
+        return set;
     }
 
     /** {@inheritDoc} */
     public Object put(String key, Object value) {
         HttpSession session = request.getSession();
         if (value == null) {
-            return (remove(key));
+            return remove(key);
         }
         String skey = key(key);
         Object previous = session.getAttribute(skey);
         session.setAttribute(skey, value);
-        return (previous);
+        return previous;
     }
 
     /** {@inheritDoc} */
@@ -205,7 +205,7 @@ final class ServletSessionScopeMap implements Map<String, Object> {
         String skey = key(key);
         Object previous = session.getAttribute(skey);
         session.removeAttribute(skey);
-        return (previous);
+        return previous;
     }
 
     /** {@inheritDoc} */
@@ -220,7 +220,7 @@ final class ServletSessionScopeMap implements Map<String, Object> {
                 n++;
             }
         }
-        return (n);
+        return n;
     }
 
     /** {@inheritDoc} */
@@ -234,7 +234,7 @@ final class ServletSessionScopeMap implements Map<String, Object> {
                 list.add(session.getAttribute(keys.nextElement()));
             }
         }
-        return (list);
+        return list;
     }
 
     /**
@@ -250,9 +250,9 @@ final class ServletSessionScopeMap implements Map<String, Object> {
         if (key == null) {
             throw new IllegalArgumentException();
         } else if (key instanceof String) {
-            return ((String) key);
+            return (String) key;
         } else {
-            return (key.toString());
+            return key.toString();
         }
     }
 }

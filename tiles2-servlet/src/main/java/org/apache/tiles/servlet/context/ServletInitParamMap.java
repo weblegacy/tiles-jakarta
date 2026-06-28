@@ -60,7 +60,7 @@ final class ServletInitParamMap implements Map<String, String> {
 
     /** {@inheritDoc} */
     public boolean containsKey(Object key) {
-        return (context.getInitParameter(key(key)) != null);
+        return context.getInitParameter(key(key)) != null;
     }
 
     /** {@inheritDoc} */
@@ -68,10 +68,10 @@ final class ServletInitParamMap implements Map<String, String> {
         Iterator<String> values = values().iterator();
         while (values.hasNext()) {
             if (value.equals(values.next())) {
-                return (true);
+                return true;
             }
         }
-        return (false);
+        return false;
     }
 
     /** {@inheritDoc} */
@@ -85,7 +85,7 @@ final class ServletInitParamMap implements Map<String, String> {
             set.add(new MapEntry<String, String>(key, context
                     .getInitParameter(key), false));
         }
-        return (set);
+        return set;
     }
 
     /** {@inheritDoc} */
@@ -108,17 +108,17 @@ final class ServletInitParamMap implements Map<String, String> {
 
     /** {@inheritDoc} */
     public String get(Object key) {
-        return (context.getInitParameter(key(key)));
+        return context.getInitParameter(key(key));
     }
 
     /** {@inheritDoc} */
     public int hashCode() {
-        return (context.hashCode());
+        return context.hashCode();
     }
 
     /** {@inheritDoc} */
     public boolean isEmpty() {
-        return (size() < 1);
+        return size() < 1;
     }
 
     /** {@inheritDoc} */
@@ -129,7 +129,7 @@ final class ServletInitParamMap implements Map<String, String> {
         while (keys.hasMoreElements()) {
             set.add(keys.nextElement());
         }
-        return (set);
+        return set;
     }
 
     /** {@inheritDoc} */
@@ -156,7 +156,7 @@ final class ServletInitParamMap implements Map<String, String> {
             keys.nextElement();
             n++;
         }
-        return (n);
+        return n;
     }
 
     /** {@inheritDoc} */
@@ -167,7 +167,7 @@ final class ServletInitParamMap implements Map<String, String> {
         while (keys.hasMoreElements()) {
             list.add(context.getInitParameter(keys.nextElement()));
         }
-        return (list);
+        return list;
     }
 
     /**
@@ -183,9 +183,9 @@ final class ServletInitParamMap implements Map<String, String> {
         if (key == null) {
             throw new IllegalArgumentException();
         } else if (key instanceof String) {
-            return ((String) key);
+            return (String) key;
         } else {
-            return (key.toString());
+            return key.toString();
         }
     }
 }

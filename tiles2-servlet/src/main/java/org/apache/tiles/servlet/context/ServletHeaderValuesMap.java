@@ -60,13 +60,13 @@ final class ServletHeaderValuesMap implements Map<String, String[]> {
 
     /** {@inheritDoc} */
     public boolean containsKey(Object key) {
-        return (request.getHeader(key(key)) != null);
+        return request.getHeader(key(key)) != null;
     }
 
     /** {@inheritDoc} */
     public boolean containsValue(Object value) {
         if (!(value instanceof String[])) {
-            return (false);
+            return false;
         }
         String[] test = (String[]) value;
         Iterator<String[]> values = values().iterator();
@@ -81,11 +81,11 @@ final class ServletHeaderValuesMap implements Map<String, String[]> {
                     }
                 }
                 if (matched) {
-                    return (true);
+                    return true;
                 }
             }
         }
-        return (false);
+        return false;
     }
 
     /** {@inheritDoc} */
@@ -100,7 +100,7 @@ final class ServletHeaderValuesMap implements Map<String, String[]> {
             set.add(new MapEntry<String, String[]>(key,
                     enumeration2array(headerEnum), false));
         }
-        return (set);
+        return set;
     }
 
     /** {@inheritDoc} */
@@ -129,17 +129,17 @@ final class ServletHeaderValuesMap implements Map<String, String[]> {
         while (values.hasMoreElements()) {
             list.add(values.nextElement());
         }
-        return ((list.toArray(new String[list.size()])));
+        return list.toArray(new String[0]);
     }
 
     /** {@inheritDoc} */
     public int hashCode() {
-        return (request.hashCode());
+        return request.hashCode();
     }
 
     /** {@inheritDoc} */
     public boolean isEmpty() {
-        return (size() < 1);
+        return size() < 1;
     }
 
     /** {@inheritDoc} */
@@ -150,7 +150,7 @@ final class ServletHeaderValuesMap implements Map<String, String[]> {
         while (keys.hasMoreElements()) {
             set.add(keys.nextElement());
         }
-        return (set);
+        return set;
     }
 
     /** {@inheritDoc} */
@@ -177,7 +177,7 @@ final class ServletHeaderValuesMap implements Map<String, String[]> {
             keys.nextElement();
             n++;
         }
-        return (n);
+        return n;
     }
 
     /** {@inheritDoc} */
@@ -190,7 +190,7 @@ final class ServletHeaderValuesMap implements Map<String, String[]> {
             Enumeration<String> values = request.getHeaders(key);
             list.add(enumeration2array(values));
         }
-        return (list);
+        return list;
     }
 
     /**
@@ -206,9 +206,9 @@ final class ServletHeaderValuesMap implements Map<String, String[]> {
         if (key == null) {
             throw new IllegalArgumentException();
         } else if (key instanceof String) {
-            return ((String) key);
+            return (String) key;
         } else {
-            return (key.toString());
+            return key.toString();
         }
     }
 

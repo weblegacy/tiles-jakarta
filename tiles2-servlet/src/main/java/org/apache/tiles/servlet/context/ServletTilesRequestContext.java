@@ -139,7 +139,7 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
         if ((header == null) && (request != null)) {
             header = new ServletHeaderMap(request, response);
         }
-        return (header);
+        return header;
 
     }
 
@@ -149,7 +149,7 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
         if ((headerValues == null) && (request != null)) {
             headerValues = new ServletHeaderValuesMap(request);
         }
-        return (headerValues);
+        return headerValues;
 
     }
 
@@ -159,7 +159,7 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
         if ((param == null) && (request != null)) {
             param = new ServletParamMap(request);
         }
-        return (param);
+        return param;
 
     }
 
@@ -169,7 +169,7 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
         if ((paramValues == null) && (request != null)) {
             paramValues = new ServletParamValuesMap(request);
         }
-        return (paramValues);
+        return paramValues;
 
     }
 
@@ -179,7 +179,7 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
         if ((requestScope == null) && (request != null)) {
             requestScope = new ServletRequestScopeMap(request);
         }
-        return (requestScope);
+        return requestScope;
 
     }
 
@@ -189,7 +189,7 @@ public class ServletTilesRequestContext extends TilesApplicationContextWrapper
         if ((sessionScope == null) && (request != null)) {
             sessionScope = new ServletSessionScopeMap(request);
         }
-        return (sessionScope);
+        return sessionScope;
 
     }
 

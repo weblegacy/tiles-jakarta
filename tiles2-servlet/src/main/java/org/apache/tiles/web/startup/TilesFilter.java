@@ -85,7 +85,7 @@ public class TilesFilter extends TilesServlet implements Filter {
      */
     @Deprecated
     public FilterConfig getFilterConfig() {
-        return (this.filterConfig);
+        return filterConfig;
     }
 
     /**

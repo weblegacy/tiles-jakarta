@@ -63,23 +63,23 @@ final class ServletApplicationScopeMap implements Map<String, Object> {
 
     /** {@inheritDoc} */
     public boolean containsKey(Object key) {
-        return (context.getAttribute(key(key)) != null);
+        return context.getAttribute(key(key)) != null;
     }
 
     /** {@inheritDoc} */
     @SuppressWarnings("unchecked")
     public boolean containsValue(Object value) {
         if (value == null) {
-            return (false);
+            return false;
         }
         Enumeration<String> keys = context.getAttributeNames();
         while (keys.hasMoreElements()) {
             Object next = context.getAttribute(keys.nextElement());
             if (next == value) {
-                return (true);
+                return true;
             }
         }
-        return (false);
+        return false;
     }
 
     /** {@inheritDoc} */
@@ -93,7 +93,7 @@ final class ServletApplicationScopeMap implements Map<String, Object> {
             set.add(new MapEntry<String, Object>(key,
                     context.getAttribute(key), true));
         }
-        return (set);
+        return set;
     }
 
     /** {@inheritDoc} */
@@ -116,17 +116,17 @@ final class ServletApplicationScopeMap implements Map<String, Object> {
 
     /** {@inheritDoc} */
     public Object get(Object key) {
-        return (context.getAttribute(key(key)));
+        return context.getAttribute(key(key));
     }
 
     /** {@inheritDoc} */
     public int hashCode() {
-        return (context.hashCode());
+        return context.hashCode();
     }
 
     /** {@inheritDoc} */
     public boolean isEmpty() {
-        return (size() < 1);
+        return size() < 1;
     }
 
     /** {@inheritDoc} */
@@ -137,18 +137,18 @@ final class ServletApplicationScopeMap implements Map<String, Object> {
         while (keys.hasMoreElements()) {
             set.add(keys.nextElement());
         }
-        return (set);
+        return set;
     }
 
     /** {@inheritDoc} */
     public Object put(String key, Object value) {
         if (value == null) {
-            return (remove(key));
+            return remove(key);
         }
         String skey = key(key);
         Object previous = context.getAttribute(skey);
         context.setAttribute(skey, value);
-        return (previous);
+        return previous;
     }
 
     /** {@inheritDoc} */
@@ -165,7 +165,7 @@ final class ServletApplicationScopeMap implements Map<String, Object> {
         String skey = key(key);
         Object previous = context.getAttribute(skey);
         context.removeAttribute(skey);
-        return (previous);
+        return previous;
     }
 
     /** {@inheritDoc} */
@@ -177,7 +177,7 @@ final class ServletApplicationScopeMap implements Map<String, Object> {
             keys.nextElement();
             n++;
         }
-        return (n);
+        return n;
     }
 
     /** {@inheritDoc} */
@@ -188,7 +188,7 @@ final class ServletApplicationScopeMap implements Map<String, Object> {
         while (keys.hasMoreElements()) {
             list.add(context.getAttribute(keys.nextElement()));
         }
-        return (list);
+        return list;
     }
 
     /**
@@ -204,9 +204,9 @@ final class ServletApplicationScopeMap implements Map<String, Object> {
         if (key == null) {
             throw new IllegalArgumentException();
         } else if (key instanceof String) {
-            return ((String) key);
+            return (String) key;
         } else {
-            return (key.toString());
+            return key.toString();
         }
     }
 }

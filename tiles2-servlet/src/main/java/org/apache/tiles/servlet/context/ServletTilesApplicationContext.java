@@ -74,7 +74,7 @@ public class ServletTilesApplicationContext implements TilesApplicationContext {
         if ((applicationScope == null) && (servletContext != null)) {
             applicationScope = new ServletApplicationScopeMap(servletContext);
         }
-        return (applicationScope);
+        return applicationScope;
 
     }
 
@@ -84,7 +84,7 @@ public class ServletTilesApplicationContext implements TilesApplicationContext {
         if ((initParam == null) && (servletContext != null)) {
             initParam = new ServletInitParamMap(servletContext);
         }
-        return (initParam);
+        return initParam;
 
     }
 
